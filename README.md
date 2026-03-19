@@ -104,3 +104,10 @@ npm run preview  # Preview production build
 ## Deployment
 
 Deployed on Vercel. Push to `main` triggers automatic deployment.
+
+## License
+
+This project uses a dual license:
+
+- **Code** (source files, configurations, templates): [MIT License](LICENSE)
+- **Content** (articles, posts, images, and other assets in `src/content/`): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
