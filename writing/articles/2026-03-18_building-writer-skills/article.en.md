@@ -10,6 +10,8 @@ My own experience confirmed this. AI agents write poorly without guidance. Most 
 
 The first draft of this article was produced with Writer-Skills, a set of skills for collaborating with AI agents that covers the entire writing workflow, from choosing a topic and gathering material to writing, editorial review, and translation.
 
+Writer-Skills is open source — you can find the full code on [GitHub](https://github.com/sadcoderlabs/writer-skills).
+
 ## Lessons from the Previous Version
 
 Writer-Skills wasn't my first attempt at using AI agents for writing. I'd previously built a skill for non-fiction writing and hit quite a few walls.

@@ -10,6 +10,8 @@
 
 而這篇文章的初稿就是用 writer-skills 產生，這是一個用在與 AI Agent 一起進行協作的技能，從挑選題目、蒐集素材到寫作、編輯審稿以及最後翻譯的整體寫作工作流程。
 
+Writer-Skills 是開源的，你可以在 [GitHub](https://github.com/sadcoderlabs/writer-skills) 上找到完整的程式碼。
+
 ## 前一版的教訓
 
 Writer-Skills 不是我第一次嘗試用 AI agent 來輔助寫作。之前我寫過一個針對非虛構寫作的 Skill，踩了不少雷。
