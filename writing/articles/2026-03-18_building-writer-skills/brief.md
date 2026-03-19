@@ -4,7 +4,7 @@
 - Title: 我們如何打造 Writer-Skills：一套用 AI Agent Skills 驅動的寫作工作流
 - Author: Yuren Ju
 - Date: 2026-03-18
-- Status: review  <!-- draft | ready | writing | review | published -->
+- Status: published  <!-- draft | ready | writing | review | published -->
 - Original language: zh
 - Translations: en
 
