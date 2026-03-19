@@ -1,12 +1,9 @@
 ---
-title: "我们的新网站上线了！"
+title: "新網站上線了！"
 date: 2026-03-19
-platform: ["twitter", "mastodon"]
+platform: ["twitter", "bluesky"]
+tags: ["發布", "公告"]
 lang: zh
-tags: ["发布", "公告"]
-publishedUrl:
-  twitter: "https://twitter.com/example/status/456"
-  mastodon: "https://mastodon.social/@example/456"
 ---
 
-我们的新网站正式上线了！使用 Astro 6 和 Tailwind CSS 4 构建，部署在 Vercel 上。欢迎访问！
+我們的新網站正式上線了！使用 Astro 6 和 Tailwind CSS 4 建置，部署在 Vercel 上。歡迎來逛逛！

@@ -28,7 +28,7 @@ const { Content } = await render(post);
     </div>
     {post.data.publishedUrl && (
       <div class="border-t dark:border-gray-700 pt-4 mt-6">
-        <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">发布于</h2>
+        <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">發布於</h2>
         <div class="flex gap-3">
           {Object.entries(post.data.publishedUrl).map(([platform, url]) => (
             <a href={url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline text-sm capitalize">

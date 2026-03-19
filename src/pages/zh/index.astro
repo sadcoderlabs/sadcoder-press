@@ -13,12 +13,12 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
   .slice(0, 5);
 ---
 
-<Base title="首页" lang={lang}>
-  <h1 class="text-3xl font-bold mt-8 mb-6">欢迎</h1>
+<Base title="首頁" lang={lang}>
+  <h1 class="text-3xl font-bold mt-8 mb-6">歡迎</h1>
 
   <section class="mb-12">
-    <h2 class="text-xl font-semibold mb-4">最新博客</h2>
-    {blogPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">暂无文章。</p>}
+    <h2 class="text-xl font-semibold mb-4">最新文章</h2>
+    {blogPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">尚無文章。</p>}
     <ul class="space-y-3">
       {blogPosts.map((post) => (
         <li>
@@ -31,8 +31,8 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
   </section>
 
   <section>
-    <h2 class="text-xl font-semibold mb-4">最新动态</h2>
-    {socialPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">暂无动态。</p>}
+    <h2 class="text-xl font-semibold mb-4">最新動態</h2>
+    {socialPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">尚無動態。</p>}
     <ul class="space-y-3">
       {socialPosts.map((post) => (
         <li>
