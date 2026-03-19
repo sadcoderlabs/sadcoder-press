@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   lang: 'en' | 'zh';
@@ -19,9 +20,12 @@ const t = labels[lang];
 
 <nav class="flex items-center justify-between max-w-3xl mx-auto px-4 py-6">
   <div class="flex gap-6">
-    <a href={`${prefix}/`} class="text-gray-700 hover:text-black transition-colors">{t.home}</a>
-    <a href={`${prefix}/blog/`} class="text-gray-700 hover:text-black transition-colors">{t.blog}</a>
-    <a href={`${prefix}/posts/`} class="text-gray-700 hover:text-black transition-colors">{t.posts}</a>
+    <a href={`${prefix}/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.home}</a>
+    <a href={`${prefix}/blog/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.blog}</a>
+    <a href={`${prefix}/posts/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.posts}</a>
   </div>
-  <LanguageSwitcher lang={lang} />
+  <div class="flex items-center gap-4">
+    <ThemeToggle />
+    <LanguageSwitcher lang={lang} />
+  </div>
 </nav>

@@ -20,7 +20,7 @@ const { Content } = await render(post);
     <p class="text-sm text-gray-500 mb-6">{post.data.date.toLocaleDateString('en-US')}</p>
     <div class="flex gap-1 mb-6">
       {post.data.tags.map((tag) => (
-        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{tag}</span>
+        <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{tag}</span>
       ))}
     </div>
     <div class="prose max-w-none">
