@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { getSlug } from '../../../lib/utils';
 
 const lang = 'zh';
 
@@ -14,8 +15,8 @@ const posts = (await getCollection('posts', ({ data }) => data.lang === lang && 
   <ul class="space-y-6">
     {posts.map((post) => (
       <li>
-        <a href={`/zh/posts/${post.id.replace(/^zh\//, '')}/`} class="text-xl text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
-        <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('zh-CN')}</span>
+        <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-xl text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
+        <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('zh-TW')}</span>
         <div class="flex gap-1 mt-2">
           {post.data.platform.map((p) => (
             <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{p}</span>

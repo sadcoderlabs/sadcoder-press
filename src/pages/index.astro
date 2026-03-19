@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { getSlug } from '../lib/utils';
 
 const lang = 'en';
 
@@ -22,7 +23,7 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
     <ul class="space-y-3">
       {blogPosts.map((post) => (
         <li>
-          <a href={`/blog/${post.id.replace(/^en\//, '')}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
+          <a href={`/blog/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
           <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('en-US')}</span>
           <p class="text-gray-600 dark:text-gray-400 text-sm">{post.data.description}</p>
         </li>
@@ -36,7 +37,7 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
     <ul class="space-y-3">
       {socialPosts.map((post) => (
         <li>
-          <a href={`/posts/${post.id.replace(/^en\//, '')}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
+          <a href={`/posts/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
           <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('en-US')}</span>
           <div class="flex gap-1 mt-1">
             {post.data.platform.map((p) => (

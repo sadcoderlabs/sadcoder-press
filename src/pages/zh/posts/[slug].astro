@@ -1,11 +1,12 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { getSlug } from '../../../lib/utils';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => data.lang === 'zh' && !data.draft);
   return posts.map((post) => ({
-    params: { slug: post.id.replace(/^zh\//, '') },
+    params: { slug: getSlug(post.id) },
     props: { post },
   }));
 }
@@ -17,7 +18,7 @@ const { Content } = await render(post);
 <Base title={post.data.title} lang="zh">
   <article class="mt-8">
     <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>
-    <p class="text-sm text-gray-500 mb-4">{post.data.date.toLocaleDateString('zh-CN')}</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{post.data.date.toLocaleDateString('zh-TW')}</p>
     <div class="flex gap-1 mb-4">
       {post.data.platform.map((p) => (
         <span class="text-xs bg-blue-900 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded">{p}</span>
