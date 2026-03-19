@@ -1,0 +1,27 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  lang: 'en' | 'zh';
+}
+
+const { lang } = Astro.props;
+
+const prefix = lang === 'en' ? '' : '/zh';
+
+const labels = {
+  en: { home: 'Home', blog: 'Blog', posts: 'Posts' },
+  zh: { home: '首页', blog: '博客', posts: '动态' },
+};
+
+const t = labels[lang];
+---
+
+<nav class="flex items-center justify-between max-w-3xl mx-auto px-4 py-6">
+  <div class="flex gap-6">
+    <a href={`${prefix}/`} class="text-gray-700 hover:text-black transition-colors">{t.home}</a>
+    <a href={`${prefix}/blog/`} class="text-gray-700 hover:text-black transition-colors">{t.blog}</a>
+    <a href={`${prefix}/posts/`} class="text-gray-700 hover:text-black transition-colors">{t.posts}</a>
+  </div>
+  <LanguageSwitcher lang={lang} />
+</nav>

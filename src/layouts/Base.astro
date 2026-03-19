@@ -1,0 +1,26 @@
+---
+import Nav from '../components/Nav.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  lang: 'en' | 'zh';
+}
+
+const { title, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-gray-900 min-h-screen">
+    <Nav lang={lang} />
+    <main class="max-w-3xl mx-auto px-4 pb-16">
+      <slot />
+    </main>
+  </body>
+</html>

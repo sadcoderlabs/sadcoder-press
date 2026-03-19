@@ -1,0 +1,32 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const lang = 'zh';
+
+const posts = (await getCollection('posts', ({ data }) => data.lang === lang && !data.draft))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Base title="动态" lang={lang}>
+  <h1 class="text-3xl font-bold mt-8 mb-6">动态</h1>
+  {posts.length === 0 && <p class="text-gray-500">暂无动态。</p>}
+  <ul class="space-y-6">
+    {posts.map((post) => (
+      <li>
+        <a href={`/zh/posts/${post.id.replace(/^zh\//, '')}/`} class="text-xl text-blue-600 hover:underline">{post.data.title}</a>
+        <span class="text-sm text-gray-500 ml-2">{post.data.date.toLocaleDateString('zh-CN')}</span>
+        <div class="flex gap-1 mt-2">
+          {post.data.platform.map((p) => (
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{p}</span>
+          ))}
+        </div>
+        <div class="flex gap-1 mt-1">
+          {post.data.tags.map((tag) => (
+            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{tag}</span>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ul>
+</Base>
