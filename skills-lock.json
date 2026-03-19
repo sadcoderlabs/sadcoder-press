@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "article-preparation": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "2f70df6ddb7ce8ea750696b587fb29092ff7a518beccde4dbe10d737c558b1bb"
+    },
+    "article-translation": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "1d4b83fda9febec83112bce2ad8c17b57043d7020d2967226db152bec6a4a994"
+    },
+    "article-writing": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "ff3cea55726b24958d4ac0b6285404370bbd0a9781dd7723a024cd015eeee319"
+    },
+    "writing-management": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "afc1f1ee42dd801f8f78927f718a804a3909e4387a3877659375e5b7032f5dc7"
+    }
+  }
+}
