@@ -92,5 +92,5 @@
 - [x] First draft completed
 - [x] Fact-check completed
 - [ ] Review completed
-- [ ] Translations completed
+- [x] Translations completed
 - [ ] Finalized
