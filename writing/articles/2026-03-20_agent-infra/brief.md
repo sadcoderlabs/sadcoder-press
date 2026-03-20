@@ -1,7 +1,7 @@
 # Writing Brief
 
 ## Article Info
-- Title: Agent 基礎建設：當每個人都有自己的 Agent，我們需要什麼？
+- Title: Agent 不需要 Email
 - Author: Shao
 - Date: 2026-03-20
 - Status: writing  <!-- draft | ready | writing | review | published -->
@@ -20,71 +20,58 @@
 - ideas.md: "Agent 基礎建設：當服務不再為人類而設計" (2026-03-20) @shao
 
 ## Article Goals
-- Reader takeaway: 一個判斷 agent infra/service/tool/app 重要程度的框架，加上目前早期案例的全景圖，讓讀者能自己評估哪些方向值得關注或投入
-- Goal alignment: 直接展現團隊在 agent 基礎建設方向的深度思考，這正是「為 agent 世界打造產品」的團隊最該寫的文章——有框架、有案例、有觀點
+- Reader takeaway: 一個區分 bridge vs foundation 的框架，加上 agent-friendly 服務設計原則，讓讀者重新思考哪些 agent infra 是過渡期產物、哪些是真正值得建的
+- Goal alignment: 直接展現團隊在 agent 基礎建設方向的思考，用具體產品概念而非抽象分析來談觀點
 
 ## Writing Style
 
 
 ## Raw Materials
 
-### 作者素材（Shao 原始 pitch）
-- 每個人都會有自己的 agent，但現有服務為人類打造
-- 每個 marketplace 都有誘因阻擋/隔離 bot
-- 服務會分化：完全面向 bot（mails.dev）或完全面向人類（Twitter）
-- Agent 需要什麼基礎建設？身份？存儲？
-- 有了基礎建設後需要什麼應用？
-- 不要花篇幅解釋「為什麼需要」——讀者已知，直接進入探索
-- 需要框架判斷重要程度
-- 需要早期案例
+### 作者素材（Shao）
+- 產品概念：一系列開源專案，鏡像現有人類工具，agent-first 設計
+- 三種使用者：agent 直接用 hosting 版 / 開發者自架開源版 / 非技術人類透過 Sad Coder 取得客製服務
+- Agent 路徑：完全自主、不需要 email/phone、免費層零身份、付費只需支付方式（x402）、標準介面（MCP, CLI, skill, llms.txt）
+- 核心賣點：onboarding 對 agent 友善
+- 11 個服務清單：phone, mail, calendar, doc, spreadsheet, database, git hosting, static site hosting + access control, password management, newsletter, wallet
+- 每 1-2 週 launch 一個
+- Bridge vs Foundation 框架：agent 需要 mail 只是因為人類服務要求 email 作為 identity，這是過渡期現象
+- 不強調 crypto/wallet 避免刻板印象，x402 帶到就好
 
 ## Outline
 
-### 1. 現有服務正在選邊站（簡短開場）
-**Purpose:** 用 2-3 個具體案例快速建立前提——不解釋「為什麼」，只展示「正在發生什麼」，然後直接進入正題。
+### 1. Agent 需要 email 嗎？
+**Purpose:** 用 mail 開場展示反直覺：agent 最常用的工具之一其實是過渡期產物。快速建立問題意識。
 **Materials:**
-- Cloudflare 雙面策略：幫客戶封鎖 4,160 億次 AI bot 請求，同時賣 agent-friendly infra（MCP server hosting）
-- Twitter/X API 付費化：名義反 bot，實際淘汰了小創作者 bot，大 bot 反而有錢付費
-- Neon：原本給人用的 serverless DB，agent 創建速度是人類 4 倍，現在轉型 agent-first
-- 作者觀點：服務正在分化為「完全面向 bot」或「完全面向人類」
+- Agent 要寄信 → 要 Gmail → 要 OAuth → 要 Google 帳號 → 要⋯一個 email 地址來註冊 email 服務
+- Agent 需要 email 不是因為 email 本身有價值，而是因為人類網路世界的通用 identity 就是 email
+- mails.dev 作為早期案例
+- 當更多服務為 agent 設計，email 作為 identity 的角色會消失
 
-### 2. Agent 需要什麼基礎建設？——一個依賴關係框架
-**Purpose:** 提出文章核心框架：用依賴關係圖判斷 agent infra 各層的重要程度。不是列清單，而是給讀者一個能自己判斷的工具。
+### 2. 如果從零幫 agent 設計服務
+**Purpose:** 介紹 agent-friendly 服務的設計原則，用具體產品概念展示。
 **Materials:**
-- 依賴關係框架（底→上）：身份 → Compute → 持久狀態 → 工具存取 → 支付 → Agent 間通訊 → 可觀測性 → Marketplace → 治理
-- LangChain 需求特性框架作為補充：long-running / stateful / HITL / bursty——判斷現有 infra 哪裡不夠用
-- Madrona 三層（Tools/Data/Orchestration）作為另一個參照
-- 核心論點：用「沒有 X，Y 就不能運作」來判斷優先順序，比用市場規模更準
+- 概念：開源鏡像版人類常用工具，agent-first
+- 設計原則：(1) 免費層零身份 (2) 付費門檻只需支付方式 (3) 標準介面：MCP, CLI, llms.txt
+- 對比：人類服務靠身份圍牆獲取用戶注意力，agent 服務按使用量收費
+- 三種使用者路徑：agent 直接用 / 開發者自架 / 非技術用戶透過客製服務
 
-### 3. 底層：身份與 Compute（目前最缺的）
-**Purpose:** 深入探索框架中最底層、最急需的兩塊。
+### 3. Bridge vs Foundation：哪些是過渡期產物？
+**Purpose:** 核心框架——區分 agent 因為人類世界而需要的工具 vs agent 本來就需要的工具。
 **Materials:**
-- **身份**：NHI 已成 Forrester 獨立類別；SPIFFE 太重、OAuth 太以人為中心；Aembit secretless IAM；Entro；WEF 列為 2025 最重要 cybersecurity 議題
-- **Compute/Sandbox**：E2B（agent cloud，已融資）、Browserbase+Stagehand（500K 月下載，有 stealth mode）、Modal
-- Visa TAP / Mastercard Agent Pay 的做法：不封鎖，而是「識別合法 agent」——這其實是身份層的延伸
+- Bridge：mail（註冊要 email）、phone（2FA）、password manager（人類服務有密碼）
+- Foundation：database（agent 要存資料）、git hosting（agent 要版控）、static site hosting（agent 要發布內容）
+- 灰色地帶：calendar（跟人協調 vs agent 間排程）、doc/spreadsheet（人類可讀 vs 結構化資料）、newsletter（觸及人類讀者）
+- 判斷方法：「如果所有服務都為 agent 設計，agent 還需要這個工具嗎？」
+- Bridge 現在重要但會萎縮，Foundation 是長期方向
 
-### 4. 中層：支付與 Agent 間通訊（碎片化最嚴重的）
-**Purpose:** 展示正在同時爆發但尚無標準的兩個關鍵層。
+### 4. 從哪裡開始？
+**Purpose:** 從框架推導行動。給讀者具體 takeaway。
 **Materials:**
-- **支付**：x402（Coinbase/USDC/HTTP 402）、Coinbase AgentKit、Visa TAP、Mastercard Agent Pay、Stripe USDC、Google AP2——六個系統 2025 下半年同時出現，沒有單一標準
-- **協議**：MCP（Anthropic，1000+ servers，OpenAI 也採用）解決 agent↔tool；A2A（Google，移交 Linux Foundation）解決 agent↔agent
-- 核心觀察：支付是 agent 從「操作者」變成「經濟行為者」的門檻
-
-### 5. 早期案例全景
-**Purpose:** 給讀者一張快速參照的地圖——目前誰在做什麼，各層有什麼。
-**Materials:**
-- 存儲/記憶：Mem0（v1.0）、Neon、Redis vector search、各家 vector DB
-- 監控：LangSmith、Langfuse、Arize、AgentOps——可觀測性是目前可以最快落地的層
-- Marketplace：RentAHuman.ai（agent 雇用人類，WIRED 報導首例）
-- 整體判斷：目前仍是 scaffolding era——大部分是把人類工具湊合用，真正 agent-native 的設計還在早期
-
-### 6. 接下來會發生什麼？
-**Purpose:** 用框架推導接下來最可能發生的事，給讀者 actionable 判斷。
-**Materials:**
-- 框架推導：身份標準化 → 支付收斂 → agent 成為真正的經濟行為者 → marketplace 規模化
-- 目前最缺四件事：agent 身份標準、支付統一、持久狀態、agent 間信任
-- Madrona："Back then, dominated by DIY solutions; today, that picture has changed dramatically"
-- 開放問題：agent 基礎建設會長出全新的平台，還是現有大公司（Cloudflare、Google、Stripe）會吃掉這些機會？
+- 選擇標準：foundation > bridge、使用頻率、技術可行性
+- 每 1-2 週一個新服務的節奏
+- 每多一個 agent-native 服務，agent 需要的 bridge 就少一個
+- 開放問題：bridge 的平台效應（email 的網路效應）會不會造成路徑依賴，讓過渡期變成永久？
 
 ## Checklist
 

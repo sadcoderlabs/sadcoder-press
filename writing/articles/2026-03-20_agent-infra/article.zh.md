@@ -1,59 +1,59 @@
-# Agent 基礎建設：當每個人都有自己的 Agent，我們需要什麼？
+# Agent 不需要 Email
 
-Cloudflare 在過去半年幫客戶擋掉了 [4,160 億次 AI bot 請求](https://www.wired.com/story/big-interview-event-matthew-prince-cloudflare/)。同一時間，Cloudflare 自己推出了 MCP server hosting，讓 AI agent 可以部署在它的平台上。封鎖 bot 和服務 bot，同一家公司同時在做。
+你的 AI agent 要寄一封信。它需要 Gmail。Gmail 需要 OAuth。OAuth 需要 Google 帳號。Google 帳號需要⋯一個 email 地址。
 
-Twitter 在 2023 年把 API 改成付費制，說是要打擊 bot。結果有資源的大型 bot 繼續運作，[被淘汰的是寫詩、報天氣的個人創作者 bot](https://www.tubefilter.com/2023/02/02/twitter-paid-api-access-bots/)。Neon 是一個原本給開發者用的 serverless Postgres，現在 AI agent 在上面建資料庫的速度[是人類的四倍](https://www.madrona.com/ai-agent-infrastructure-three-layers-tools-data-orchestration/)，Databricks 直接把它買了下來。
+Agent 需要 email 來註冊 email 服務。這句話念出來就覺得哪裡不對。
 
-現有的服務正在選邊站：要嘛封鎖 agent，要嘛擁抱 agent。這中間的灰色地帶正在消失。agent 需要自己的基礎建設，這件事已經清楚了。還沒清楚的是：需要哪些？哪些最重要？目前有誰在做？
+Agent 其實不需要 email。它需要 email 的原因是：網路上幾乎每一個服務都把 email 當作身份的入口。你要用 Twilio，先給 email。你要用 Supabase，先給 email。你要用 GitHub，先給 email。Email 是人類在網路世界裡最通用的身份證明，而 agent 被迫繼承了這個遺產。
 
-## 一個判斷框架：依賴關係決定優先順序
+[mails.dev](https://mails.dev) 是少數為 agent 設計的 email 服務之一。它存在的事實本身就說明了問題：我們需要一個「給 agent 用的 email」來讓 agent 可以用那些「給人類用的服務」。這是一個墊片（shim），解決的是相容性問題，不是 agent 的真實需求。
 
-怎麼判斷哪些 agent infra 比較重要？比起看市場規模或融資金額，更實用的方法是看依賴關係：沒有 X，Y 就不能運作。
+這讓我開始想：agent 日常在用的工具裡，有多少跟 email 一樣，只是因為人類世界的規則才存在？
 
-從底往上大概是這樣：
+## 如果從零幫 agent 設計服務
 
-**身份** → agent 沒有可信身份，其他服務無法信任它。Compute/Sandbox → agent 需要安全執行的環境。**持久狀態** → agent 需要跨步驟的記憶和 checkpoint。**工具存取** → agent 需要呼叫外部服務的標準方式。**支付** → agent 能花錢和收錢，才能成為經濟行為者。**Agent 間通訊** → 多個 agent 要能協作。**可觀測性** → 得看得到 agent 在做什麼。再往上是 Marketplace 和治理。
+假設我們做一系列開源工具，鏡像人類常用的服務——mail、phone、calendar、database、git hosting、static site hosting、doc、spreadsheet、newsletter、password manager——但每一個都從 agent 的角度重新設計。
 
-[LangChain 提出的需求特性](https://blog.langchain.com/why-agent-infrastructure/)可以拿來交叉驗證：agent 的工作是 long-running（分鐘級不是毫秒級）、stateful（要記得上下文）、需要 human-in-the-loop（要能暫停和恢復）、流量 bursty（不可預測）。現有為人類設計的 infra 在這四個維度上都有缺口，而缺口的嚴重程度跟依賴關係的位置高度吻合。
+設計原則只有三條：
 
-這個框架不是唯一的分法。[Madrona 用 Tools/Data/Orchestration 三層](https://www.madrona.com/ai-agent-infrastructure-three-layers-tools-data-orchestration/)來看，更簡潔但也更粗略。依賴關係框架的好處是能回答「先做什麼」這個問題。
+**免費層不需要任何身份。** Agent 打一個 API call 就能開始用。不需要 email，不需要手機號碼，不需要 OAuth flow。連註冊這個步驟都不存在。Agent 即開即用。
 
-## 底層：身份與 Compute
+**付費只需要支付方式。** 用量超過免費門檻後，agent 只需要能付錢。不需要填表格、不需要驗證身份、不需要等人工審核。支付本身就是身份——能持續付費的 agent 就是可信的客戶。
 
-身份是目前最缺的一層。
+**標準介面。** 每個服務都提供 MCP server、CLI、和 llms.txt。Agent 不需要讀文件學怎麼用，它讀得懂這些標準格式。
 
-Non-Human Identity（NHI）已經成為[獨立的安全類別](https://www.weforum.org/stories/2025/10/non-human-identities-ai-cybersecurity/)，WEF 和 Forrester 都把它列為 2025 年最重要的 cybersecurity 議題之一。但「agent 要怎麼有身份」這件事，業界還沒有共識。[SPIFFE/SPIRE](https://www.solo.io/blog/agent-identity-and-access-management---can-spiffe-work) 是 workload 身份的開放標準，正在被評估用於 agent，但它太重了。OAuth/OIDC 是為人類設計的，agent 沒有辦法完成人類的登入流程。[Aembit](https://aembit.io/) 做 secretless IAM，讓 agent 不需要持有密鑰就能安全存取服務。[Entro](https://entro.security/) 做統一的 NHI 安全平台。如何給一個 ephemeral agent 一個可審計的身份，沒有任何現有框架是為這個場景設計的。
+對比一下人類服務為什麼要搞那麼複雜的註冊流程：因為它們的商業模式是獲取並留住用戶的注意力。身份圍牆（email + password + 2FA）是鎖定機制。Agent 服務不需要鎖定用戶，它按使用量收費就好。鎖定 agent 沒有意義——agent 不會因為「已經習慣了這個 UI」就懶得搬家。
 
-Visa 和 Mastercard 的做法值得注意。[Visa 的 Trusted Agent Protocol](https://investor.visa.com/news/news-details/2025/Visa-Introduces-Trusted-Agent-Protocol-An-Ecosystem-Led-Framework-for-AI-Commerce/default.aspx) 和 [Mastercard Agent Pay](https://www.digitalcommerce360.com/2025/10/16/visa-mastercard-both-launch-agentic-ai-payments-tools/) 的切入點是識別合法 agent。它們要解決的問題是：這個 agent 是誰派來的？它有權限做這件事嗎？這其實是身份層的延伸，只是從支付場景切入。
+這些服務同時提供三種使用方式：agent 直接用 hosted 版本；開發者可以自架開源版本；非技術的人類用戶可以透過客製化服務取得。同一套程式碼，三種路徑。
 
-Compute 層相對成熟。[E2B](https://e2b.dev/) 是最明確的 agent-native sandbox cloud，讓 agent 在隔離環境中安全執行程式碼，2025 年完成了新一輪融資。[Browserbase](https://www.browserbase.com) 提供雲端瀏覽器給 agent 使用，它的 SDK Stagehand 月下載量超過 50 萬次，有 stealth mode 可以繞過網站的反爬機制。Modal 和 Fly.io 也在這個領域，但定位更偏通用 serverless，不像 E2B 和 Browserbase 那樣 agent-first。
+## Bridge 和 Foundation
 
-## 中層：支付與 Agent 間通訊
+回到那個問題：agent 日常使用的工具裡，哪些是真實需求，哪些只是因為人類世界的規則？
 
-支付層正在同時爆發。2025 年下半年，六個 agent payment 系統幾乎同時出現：
+有一個簡單的判斷方式：**如果所有服務都是為 agent 設計的，agent 還需要這個工具嗎？**
 
-Coinbase 主導的 [x402 協議](https://www.galaxy.com/insights/research/x402-ai-agents-crypto-payments/)，讓 agent 在 HTTP 請求中內嵌 USDC 支付，用的是 HTTP 402 狀態碼。[Coinbase AgentKit](https://docs.cdp.coinbase.com/agent-kit/welcome) 讓 agent 管理自己的區塊鏈錢包。Visa TAP 和 Mastercard Agent Pay 從傳統金融切入。[Stripe 推出 USDC 支付](https://www.finextra.com/blogposting/29778/deep-dive-is-x402-payments-protocol-the-stripe-for-ai-agents)，跑在 Base 鏈上。Google 也有 [AP2（Agent Payments Protocol）](https://www.everestgrp.com/blogs/agentic-payments-reinventing-payments-for-the-ai-era-blog/)。
+用這個標準過一遍那份清單：
 
-六個系統，沒有單一標準。Agent 目前無法帶著一個錢包在不同平台之間移動。但支付是 agent 從「替你操作工具」變成「獨立經濟行為者」的關鍵門檻，所以這個碎片化最終必須收斂。
+**Bridge（過渡期工具）：** Mail。Agent 需要它只是因為其他服務要求 email 作為身份。Phone，同樣的道理，2FA 和驗證碼是人類的身份驗證方式。Password manager，因為人類服務有帳號密碼，agent 得幫忙管理。這三個工具解決的都是「agent 怎麼融入人類世界」的問題。當人類世界的服務越來越少，它們就越來越沒用。
 
-通訊協定的情況好一些。[MCP（Model Context Protocol）](https://en.wikipedia.org/wiki/Model_Context_Protocol)是 Anthropic 推出的 agent-tool 介面標準，已有超過一千個 MCP server，OpenAI 在 2025 年 3 月也正式採用。[A2A（Agent2Agent Protocol）](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)是 Google 推出的 agent-agent 通訊協定，已移交 Linux Foundation 管理。MCP 解決 agent 怎麼用工具，A2A 解決 agent 怎麼跟 agent 講話，兩者互補。
+**Foundation（原生需求）：** Database。不管世界怎麼變，agent 都需要存取結構化資料。Git hosting，agent 產出程式碼，需要版本控制。Static site hosting，agent 需要把內容發布到網路上。這些工具解決的是 agent 本身的工作流程，跟人類世界無關。
 
-但 A2A 定義了通訊格式，沒有解決信任問題：我怎麼知道跟我通訊的 agent 是誰在代表誰運作？這又回到了身份層。
+**灰色地帶最有趣。** Calendar——如果是跟人類約時間，那是 bridge；如果是 agent 之間協調排程，那可能是 foundation，但也可能根本不需要 calendar 這個形式，用 API call 就能解決。Doc 和 spreadsheet——如果是要讓人類讀，那是 bridge；如果 agent 只是要處理結構化資料，它會選 database。Newsletter——agent 想把內容送到人類面前，這永遠是 bridge，但「觸及人類讀者」這件事本身可能一直都有價值。
 
-## 早期案例全景
+Bridge 服務現在很重要。Agent 在 2026 年還是得用 Gmail、得收驗證碼、得管密碼，因為絕大多數服務仍然是為人類設計的。但每多一個 agent-native 的服務出現，bridge 的需求就少一分。
 
-在存儲和記憶層，[Mem0](https://github.com/mem0ai/mem0) 做 agent 的通用記憶層，已發布 v1.0。Neon 的 serverless Postgres 成了 agent 建立資料庫的首選。Redis 的 vector search 適合 agent 的短期/長期記憶混合架構。
+Foundation 服務的價值則是累積的。
 
-可觀測性是目前可以最快落地的層。[LangSmith](https://blog.langchain.com/why-agent-infrastructure/) 提供完整的 agent tracing 和 monitoring。[Langfuse](https://langfuse.com) 是開源替代方案，支援 self-hosting。Arize/Phoenix 用 OpenTelemetry 做 agent trace。AgentOps、Maxim AI、Galileo 也都在這個領域。跟其他層比，observability 的需求定義最清楚，工具也最成熟。
+## 從哪裡開始
 
-最有趣的早期案例或許是 [RentAHuman.ai](https://www.wired.com/story/ai-agent-rentahuman-bots-hire-humans/)。這是一個讓 AI agent 雇用人類的 marketplace：agent 透過 MCP server 或 REST API 發布任務（跑腿、開會、研究），人類競標接案。WIRED 在 2026 年 2 月報導它是第一個「AI 雇用人類」的平台。當 agent 能付錢、能發任務、能選人，marketplace 的方向就反過來了。
+如果每 1-2 週推出一個 agent-native 服務，該從哪個開始？
 
-整體來看，目前仍是 scaffolding era。大部分方案是把人類的工具改裝給 agent 用。真正 agent-native 的全新設計——從一開始就不考慮人類使用者的設計——還在很早期。
+按照 bridge vs foundation 的框架，答案很清楚：先做 foundation。做 bridge 是在幫 agent 適應一個正在消失的世界；做 foundation 是在建造 agent 自己的世界。
 
-## 接下來會發生什麼
+具體來說，database 或 git hosting 可能是最好的起點。它們是 agent 最頻繁使用的基礎工具，技術上有成熟的開源方案可以改造，而且不需要跟現有服務的網路效應競爭——agent 不在乎它的 git repo 在哪裡，只在乎 API 好不好用。
 
-用依賴關係框架來推：身份標準化會先發生（因為其他一切都依賴它），然後支付收斂（六個系統不可能長期並存），然後 agent 才能成為真正的經濟行為者，然後 marketplace 才能規模化。
+Bridge 服務可以後做，甚至可以不做——等 foundation 夠完整，bridge 自然失去存在的理由。
 
-目前最缺四件事：一個被廣泛採用的 agent 身份標準、支付協定的統一、長跑型 agent 的持久狀態管理、以及 agent 間的信任機制。
+但有一個開放的問題：email 的平台效應會不會太強？全世界的線上服務花了二十年把 email 建成通用身份層。即使 agent 不需要 email，如果 99% 的服務繼續要求 email 註冊，bridge 的「過渡期」可能會非常漫長，長到跟永久沒有區別。這取決於 agent-native 服務的成長速度。如果新服務從第一天就不要求 email，而且 agent 用這些服務的體驗遠好於用人類服務加墊片，遷移就會發生。
 
-開放問題是：這些基礎建設會長出全新的平台公司，還是現有的大公司會吃掉這些機會？Cloudflare 已經在兩邊下注。Google 同時推 A2A 和 AP2。Stripe 加入了 USDC。歷史上，infra 的大轉變通常會產生新的平台公司，但這次的 incumbent 動作很快。
+每多一個不需要 email 的服務，email 作為通用身份的力量就弱一點。
