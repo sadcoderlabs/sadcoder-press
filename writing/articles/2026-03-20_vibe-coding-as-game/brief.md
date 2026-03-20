@@ -1,7 +1,7 @@
 # Writing Brief
 
 ## Article Info
-- Title: 用遊戲類比思考多人 Agent 的可能性
+- Title: 你以為你在寫程式，其實你在玩遊戲
 - Author: Shao
 - Date: 2026-03-20
 - Status: writing  <!-- draft | ready | writing | review | published -->
