@@ -4,7 +4,7 @@ Cloudflare 在過去半年幫客戶擋掉了 [4,160 億次 AI bot 請求](https:
 
 Twitter 在 2023 年把 API 改成付費制，說是要打擊 bot。結果有資源的大型 bot 繼續運作，[被淘汰的是寫詩、報天氣的個人創作者 bot](https://www.tubefilter.com/2023/02/02/twitter-paid-api-access-bots/)。Neon 是一個原本給開發者用的 serverless Postgres，現在 AI agent 在上面建資料庫的速度[是人類的四倍](https://www.madrona.com/ai-agent-infrastructure-three-layers-tools-data-orchestration/)，Databricks 直接把它買了下來。
 
-現有的服務正在選邊站：要嘛封鎖 agent，要嘛擁抱 agent。這中間的灰色地帶正在消失。問題不再是「agent 需不需要自己的基礎建設」，而是：需要哪些？哪些最重要？目前有誰在做？
+現有的服務正在選邊站：要嘛封鎖 agent，要嘛擁抱 agent。這中間的灰色地帶正在消失。agent 需要自己的基礎建設，這件事已經清楚了。還沒清楚的是：需要哪些？哪些最重要？目前有誰在做？
 
 ## 一個判斷框架：依賴關係決定優先順序
 
@@ -22,9 +22,9 @@ Twitter 在 2023 年把 API 改成付費制，說是要打擊 bot。結果有資
 
 身份是目前最缺的一層。
 
-Non-Human Identity（NHI）已經成為[獨立的安全類別](https://www.weforum.org/stories/2025/10/non-human-identities-ai-cybersecurity/)，WEF 和 Forrester 都把它列為 2025 年最重要的 cybersecurity 議題之一。但「agent 要怎麼有身份」這件事，業界還沒有共識。[SPIFFE/SPIRE](https://www.solo.io/blog/agent-identity-and-access-management---can-spiffe-work) 是 workload 身份的開放標準，正在被評估用於 agent，但它太重了。OAuth/OIDC 是為人類設計的，agent 沒有辦法完成人類的登入流程。[Aembit](https://aembit.io/) 做 secretless IAM，讓 agent 不需要持有密鑰就能安全存取服務。[Entro](https://entro.security/) 做統一的 NHI 安全平台。但這些都還是早期方案，離「標準」很遠。
+Non-Human Identity（NHI）已經成為[獨立的安全類別](https://www.weforum.org/stories/2025/10/non-human-identities-ai-cybersecurity/)，WEF 和 Forrester 都把它列為 2025 年最重要的 cybersecurity 議題之一。但「agent 要怎麼有身份」這件事，業界還沒有共識。[SPIFFE/SPIRE](https://www.solo.io/blog/agent-identity-and-access-management---can-spiffe-work) 是 workload 身份的開放標準，正在被評估用於 agent，但它太重了。OAuth/OIDC 是為人類設計的，agent 沒有辦法完成人類的登入流程。[Aembit](https://aembit.io/) 做 secretless IAM，讓 agent 不需要持有密鑰就能安全存取服務。[Entro](https://entro.security/) 做統一的 NHI 安全平台。如何給一個 ephemeral agent 一個可審計的身份，沒有任何現有框架是為這個場景設計的。
 
-Visa 和 Mastercard 的做法值得注意。[Visa 的 Trusted Agent Protocol](https://investor.visa.com/news/news-details/2025/Visa-Introduces-Trusted-Agent-Protocol-An-Ecosystem-Led-Framework-for-AI-Commerce/default.aspx) 和 [Mastercard Agent Pay](https://www.digitalcommerce360.com/2025/10/16/visa-mastercard-both-launch-agentic-ai-payments-tools/) 的核心不是封鎖 bot，而是識別合法的 agent。它們要解決的問題是：這個 agent 是誰派來的？它有權限做這件事嗎？這其實是身份層的延伸，只是從支付場景切入。
+Visa 和 Mastercard 的做法值得注意。[Visa 的 Trusted Agent Protocol](https://investor.visa.com/news/news-details/2025/Visa-Introduces-Trusted-Agent-Protocol-An-Ecosystem-Led-Framework-for-AI-Commerce/default.aspx) 和 [Mastercard Agent Pay](https://www.digitalcommerce360.com/2025/10/16/visa-mastercard-both-launch-agentic-ai-payments-tools/) 的切入點是識別合法 agent。它們要解決的問題是：這個 agent 是誰派來的？它有權限做這件事嗎？這其實是身份層的延伸，只是從支付場景切入。
 
 Compute 層相對成熟。[E2B](https://e2b.dev/) 是最明確的 agent-native sandbox cloud，讓 agent 在隔離環境中安全執行程式碼，2025 年完成了新一輪融資。[Browserbase](https://www.browserbase.com) 提供雲端瀏覽器給 agent 使用，它的 SDK Stagehand 月下載量超過 50 萬次，有 stealth mode 可以繞過網站的反爬機制。Modal 和 Fly.io 也在這個領域，但定位更偏通用 serverless，不像 E2B 和 Browserbase 那樣 agent-first。
 
