@@ -4,7 +4,7 @@
 - Title: 你以為你在寫程式，其實你在玩遊戲
 - Author: Shao
 - Date: 2026-03-20
-- Status: writing  <!-- draft | ready | writing | review | published -->
+- Status: review  <!-- draft | ready | writing | review | published -->
 - Original language: zh
 - Translations: (skip for now, iterate on zh first)
 
@@ -117,8 +117,8 @@
 - [x] Ready for writing
 
 ### Writing & Review (managed by later skills)
-- [ ] First draft completed
-- [ ] Fact-check completed
+- [x] First draft completed
+- [x] Fact-check completed
 - [ ] Review completed
 - [ ] Translations completed
 - [ ] Finalized
