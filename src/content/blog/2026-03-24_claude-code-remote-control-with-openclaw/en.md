@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Remote Control vs OpenClaw: What's the Difference Between Giving an Agent a Computer and Giving It an IDE?"
+title: "Integrating Claude Remote Control with OpenClaw"
 date: 2026-03-24
-description: "Understanding the fundamental difference between giving an agent a computer vs an IDE, and how remote control with OpenClaw bridges the gap"
+description: "Turning Claude Code into an OpenClaw-like experience with one command, testing the bridging process and interface differences, and personal reflections on when tools become too convenient"
 tags: [ai, agent, openclaw, claude-code, remote-control]
 lang: en
 ---
@@ -18,7 +18,7 @@ Claude could access every resource on this VPS, with exactly the same capabiliti
 
 The whole setup took less than ten minutes.
 
-## First Impression: This Is Claude Code, Not OpenClaw
+## First Impression: This Is Still Claude Code, Not OpenClaw
 
 At first, the experience was almost indistinguishable from regular Claude Code. It could write code, edit files, run commands. But it lacked the sense of wonder I felt when I first used OpenClaw. OpenClaw and Claude Code have nearly identical capabilities, but Claude Code helps me **write code**, while OpenClaw helps me **solve problems**, using its ability to write code as a means to build tools and get things done.
 
@@ -63,23 +63,19 @@ Read the following files for full context:
 └── canvas/          # Working drafts
 ```
 
-After writing `CLAUDE.md`, it was getting closer. But one piece was still missing: skills.
+After writing `CLAUDE.md`, it was getting closer. Then I created a symbolic link from OpenClaw's skills directory to `.claude/skills/`, restarted remote control, and everything felt familiar.
 
-OpenClaw has a skill system, and I'd already written quite a few skills stored in a designated directory. I created a symbolic link from the original OpenClaw skills directory to Claude Code's `.claude/skills/`. Then I restarted remote control.
+Claude started reading my memory files, using my custom skills, and responding in the tone I was used to. Its behavior was already very close to the original OpenClaw. Especially after adding [playwright-cli](https://github.com/microsoft/playwright-cli) as a browser, the frustration of Claude Code's WebFetch stopping to ask for permission every time dropped significantly.
 
-The behavior changed. Claude started reading my memory files, using my custom skills, and responding in the tone I was used to. Its behavior was already very close to the original OpenClaw. Especially after adding [playwright-cli](https://github.com/microsoft/playwright-cli) as a browser, the frustration of Claude Code's WebFetch stopping to ask for permission every time dropped significantly.
+This surprised me too. One `CLAUDE.md` plus one skills symlink, and the bridging threshold was far lower than I expected.
 
-This was the most surprising moment of the entire experiment: one `CLAUDE.md` plus one skills symlink, and the bridging threshold was far lower than I expected.
+## Model Vendors Pushing Forward
 
-## An Agent-First Interface
-
-After bridging, I started interacting with it through the Claude App. One clear advantage emerged: the Claude App was designed from the start as an interface for talking to agents. Running tool-dependent tasks on a phone is especially clear. You can see which tools it's invoking, and you can stop execution at any time.
+After bridging, I started interacting with it through the Claude App. Unlike Discord or Slack, the Claude App was natively designed as an interface for talking to agents, so interactions like tool usage are presented a bit better than in messaging apps built for human-to-human communication. One interesting discovery: neither Discord nor Slack can interrupt an agent mid-execution (like telling it to stop), since messaging apps never needed that feature. But on the Claude App, you can stop the agent's execution at any time.
 
 ![Claude Desktop App connected to an openclaw-remote-control session](./assets/claude-app-openclaw-session.png)
 
-Some interface features aren't available in Claude Code yet. For example, the Chat interface now supports interactive diagrams for explaining concepts. If these tools eventually become available to general-purpose agents like OpenClaw, that would be even more convenient.
-
-We originally used OpenClaw on Slack/Discord. Discord was designed for human-to-human chat, and the agent is just a guest. Message formatting, file previews, code block rendering are all built for human conversation. The Claude App is different. Its entire UI is designed for agent collaboration. Information display, tool call results, and file diffs are all clearer than in Discord.
+Some newer interface features aren't available in Claude Code yet. For example, the Chat interface now supports [interactive diagrams](https://www.youtube.com/watch?v=Ii99RU3mOJM) for explaining concepts. If these tools eventually become available to general-purpose agents like OpenClaw, that would be even more convenient. General-purpose messaging apps would need significantly more modification to add these features compared to a purpose-built app.
 
 Anthropic has recently rolled out three related features in rapid succession. [Remote Control](https://code.claude.com/docs/en/remote-control) lets you connect back to a local Claude Code session from your phone or browser. [Channels](https://code.claude.com/docs/en/channels) pushes events from external platforms (Telegram, Discord) into a Claude Code session, enabling event-driven automation. [Dispatch](https://www.forbes.com/sites/ronschmelzer/2026/03/20/claude-dispatch-lets-you-control-claude-cowork-with-your-phone/) extends the Cowork feature in Claude Desktop, letting you assign tasks to your desktop from your phone. Together, Anthropic is trying to transform Claude Code from "an IDE agent you can only use at your desk" into "an agent partner you can reach anytime."
 
@@ -97,19 +93,19 @@ The mobile experience also needs polish. Every time I reconnect to a session fro
 
 But these are ultimately things that "haven't been built yet," not things that "can't be built."
 
-After this experiment, I got the sense that LLM vendors already have the infrastructure needed to build something very close to OpenClaw. The only question is where they choose to focus their attention and which direction they want to move.
+After this trial, I got the sense that LLM vendors already have the infrastructure needed to build something very close to OpenClaw. The only question is where they choose to focus their attention and which direction they want to move.
 
 One `CLAUDE.md`, one skills symlink, one startup command. If that's enough to replicate 60-70% of OpenClaw, the infrastructure is clearly solid. The question becomes whether entering this space has strategic value for them.
 
 But perhaps looking at it the other way around, they've tried before but were too cautious. The emergence of OpenClaw and its market reception may have given them more confidence to move in this direction.
 
-## A Bold Experiment
+## The Value of the Experiment
 
-Our team uses OpenClaw every day. Every member uses it as a work and life assistant. Company operations run through OpenClaw in Slack too, from leave requests and calendars to idea management. But we're not opposed to trying other tools, which is exactly why this experiment happened.
+Our team uses OpenClaw every day. Every member uses it as a work and life assistant. Company operations run through OpenClaw in Slack too, from leave requests and calendars to idea management. But we're not opposed to trying other tools, which is exactly why we tried Claude remote control.
 
 OpenClaw is fundamentally a bold experiment. It gives an agent a full computer and lets it freely solve problems. That's dangerous, with plenty of security concerns. But beneath the danger, many interesting things are happening.
 
-Even with security concerns, experiments like this still deliver value: they show people what becomes possible when you have this kind of tool. And these results ultimately feed back into the entire ecosystem.
+Even with security concerns, experiments like this still deliver value. It's like when humans first harnessed fire as a tool. It was unstable and dangerous, but amid the chaos and fumbling, someone could still stare into the flame, their mind racing with visions of all the ways fire would shape the future.
 
 I'm grateful that a project like OpenClaw exists. If you ask friends outside this industry, you'll find that almost no one uses anything like it. I feel fortunate to have glimpsed what the future might look like, and to reconsider: if life becomes overwhelmingly convenient, what remains that's truly valuable?
 

@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Remote Control vs OpenClaw：給 Agent 一台電腦跟給它一個 IDE 有什麼不同？"
+title: "Claude Remote Control 與 OpenClaw 的整合"
 date: 2026-03-24
-description: "理解「給 agent 一台電腦」vs「給 agent 一個 IDE」的根本差異，以及 remote control 搭配 OpenClaw 能在多大程度上彌合這個差距"
+description: "用一行指令讓 Claude Code 變成類 OpenClaw 的體驗，實測橋接過程與界面差異，以及當工具變得過於便利時的個人反思"
 tags: [ai, agent, openclaw, claude-code, remote-control]
 lang: zh
 ---
@@ -18,7 +18,7 @@ claude remote-control --permission-mode bypassPermissions
 
 整個設定過程不到十分鐘。
 
-## 第一印象：這是 Claude Code，不是 OpenClaw
+## 第一印象：這還是 Claude Code，不是 OpenClaw
 
 剛開始用的時候，體驗跟一般的 Claude Code 幾乎沒有差別。可以寫程式、改檔案、跑指令。但就是少了那種第一次使用 OpenClaw 的驚豔感。OpenClaw 跟 Claude Code 幾乎具備一樣的能力，但 Claude Code 幫我**寫程式**，而 OpenClaw 則是幫我**解決問題**，透過自己可以寫程式的能力創造工具來達成。
 
@@ -63,23 +63,19 @@ OpenClaw 在啟動的時候，會動態地把 Workspace 目錄裡的各種 `.md`
 └── canvas/          # 工作草稿區
 ```
 
-寫完 `CLAUDE.md` 之後，已經有點像了。但還缺一塊：skills。
+寫完 `CLAUDE.md` 之後，已經有點像了。接著我把 OpenClaw 的 skills 目錄建立一個 symbolic link 到 .claude/skills，重啟 remote control 後，一切都變得熟悉了。
 
-OpenClaw 有一套技能系統，我之前已經寫了不少技能放在指定目錄裡。我做了一個 symbolic link，把原本 OpenClaw 用的 skills 目錄連結到 Claude Code 的 `.claude/skills/`。重啟 remote control。
+Claude 開始讀我的記憶檔案，開始用我寫的技能，開始用我習慣的語氣回覆。它的行為跟原本的 OpenClaw 已經非常接近了，特別是可以用 [playwright-cli](https://github.com/microsoft/playwright-cli) 作為瀏覽器之後，每次 Claude Code 的 WebFetch 都要停下來詢問的煩躁感降低了不少。
 
-行為變了。Claude 開始讀我的記憶檔案，開始用我寫的技能，開始用我習慣的語氣回覆。它的行為跟原本的 OpenClaw 已經非常接近了，特別是可以用 [playwright-cli](https://github.com/microsoft/playwright-cli) 作為瀏覽器之後，每次 Claude Code 的 WebFetch 都要停下來詢問的煩躁感降低了不少。
+這也讓我感到意外，一份 `CLAUDE.md` 加上一個 skills 的 symlink，橋接的門檻比我預期低很多。
 
-這是整個實驗裡最讓我意外的一刻：一份 `CLAUDE.md` 加上一個 skills 的 symlink，橋接的門檻比我預期低很多。
+## 模型廠商的推進
 
-## Agent-first 的介面
-
-橋接完成後，我開始在 Claude App 上跟它互動。一個明顯的好處浮現了：Claude App 從設計之初就是一個跟 agent 對話的介面。在手機上執行需要工具的任務特別清楚，可以看到它正在調用的工具，當然隨時也都可以停止執行動作。
+橋接完成後，我開始在 Claude App 上跟它互動。跟在 discord/slack 上不一樣的地方是 Claude app 原生就設計是跟 agent 對話的界面，所以在跟 agent 的互動如使用工具的呈現還是比起原本給人與人之間溝通工具的詢軟體體要好上一點。有個有趣的發現是 discord 跟 slack 都不能中斷對方的執行動作（比如說要對方閉嘴），畢竟傳訊軟體從來沒有需要這樣的功能，但 Claude app 上是可以停止 agent 的執行動作的。
 
 ![Claude Desktop App 連上 openclaw-remote-control session](./assets/claude-app-openclaw-session.png)
 
-還有些界面目前還沒辦法在 Claude Code 上面用，比如 Chat 界面現在已經可以有互動式圖解來解釋一些概念，這些工具如果之後都可以用在類似 OpenClaw 這種通用 Agent 的話會更加方便。
-
-我們原本在 Slack/Discord 上用 OpenClaw。Discord 是設計給人跟人聊天的，agent 只是寄居在裡面。訊息格式、檔案預覽、程式碼區塊的呈現，都是為了人類對話設計的。Claude App 不一樣，它的整個 UI 就是為了讓你跟 agent 協作。資訊的呈現、工具呼叫的結果、檔案的 diff，都比 Discord 裡清楚。
+還有些新的界面功能目前還沒辦法在 Claude Code 上面用，比如 Chat 界面現在已經可以有[互動式圖解](https://www.youtube.com/watch?v=Ii99RU3mOJM)來解釋一些概念，這些工具如果之後都可以用在類似 OpenClaw 這種通用 Agent 的話會更加方便。通用的傳訊軟體如果要加入的話，會需要修改的幅度還是比起專用軟體要更大一些。
 
 Anthropic 最近密集推出了三個相關功能。[Remote Control](https://code.claude.com/docs/en/remote-control) 讓你從手機或瀏覽器連回本機的 Claude Code session。[Channels](https://code.claude.com/docs/en/channels) 讓外部平台（Telegram、Discord）的事件推進 Claude Code session，做到事件驅動的自動化。[Dispatch](https://www.forbes.com/sites/ronschmelzer/2026/03/20/claude-dispatch-lets-you-control-claude-cowork-with-your-phone/) 則是 Claude Desktop 的 Cowork 功能延伸，讓你在手機上指派任務給桌機。三個功能合在一起，Anthropic 想把 Claude Code 從「坐在桌前才能用的 IDE agent」變成「隨時可以 reach 的 agent partner」。
 
@@ -97,20 +93,20 @@ Wharton 商學院教授 Ethan Mollick 在 Dispatch 上線後[在 X 上說](https
 
 但這些終究都是「還沒作」，而不是「作不到」。
 
-做完這個實驗之後，我感到做 LLM 的廠商，其實已經有做到跟 OpenClaw 非常接近的成品所需要的基礎建設了。差的只是他們的注意力放在哪裡、要往哪個方向前進的問題。
+做完這個嘗試之後，我感到做 LLM 的廠商，其實已經有做到跟 OpenClaw 非常接近的成品所需要的基礎建設了。差的只是他們的注意力放在哪裡、要往哪個方向前進的問題。
 
 一份 `CLAUDE.md`，一個 skills 的 symlink，一行啟動指令。如果這樣就能做到六七成的 OpenClaw，那就代表基礎建設已經很扎實了，問題反而變成涉足這個領域對他們是否有戰略上的價值。
 
 但或許反過來說，他們之前曾經嘗試過，只是過於謹慎，而 OpenClaw 的出現與市場反應，給了他們更多的信心可以往這邊前進。
 
-## 大膽的實驗
+## 實驗的價值所在
 
-我們團隊每天都在用 OpenClaw。每個成員拿它當工作跟生活的助手，公司庶務也放在 Slack 裡用 OpenClaw 處理，從請假、行事曆到點子管理。但我們也不排斥嘗試其他工具，這也是為什麼會有這個實驗。
+我們團隊每天都在用 OpenClaw。每個成員拿它當工作跟生活的助手，公司庶務也放在 Slack 裡用 OpenClaw 處理，從請假、行事曆到點子管理。但我們也不排斥嘗試其他工具，這也是為什麼會嘗試著用 Claude remote control。
 
 OpenClaw 本質上是一個大膽的實驗。它給了 agent 一台完整的電腦，讓它自由地去解決問題。這很危險，安全性有很多疑慮。但在危險底下，有很多有趣的事情在發生。
 
-即使安全性有問題，這類實驗還是帶來了價值：讓其他人看到，如果我有這個工具，我可以做到什麼事情。而這些成果，最終會回饋到整個生態系裡。
+即使安全性有問題，這類實驗還是帶來了價值。就像是人類第一次把火作為工具一樣，它既不穩定又危險，但是在這個混亂與手忙亂之中，還是有人可以注視著火把，腦袋不停翻轉著看到未來各種已知用火的景象。
 
-我很慶幸有 OpenClaw 這樣的專案出現。如果你問問身旁不是在這個業界的朋友，會發現其實使用的人少之又少。而很幸運自己有機會能夠一瞥未來的世界，並且重新思考，如果生活過度的便利，那麼留下最終有價值的事物是什麼？
+很慶幸有 OpenClaw 這樣的專案出現。如果你問問身旁不是在這個業界的朋友，會發現其實使用的人少之又少。而很幸運自己有機會能夠一瞥未來的世界，並且重新思考，如果生活過度的便利，那麼留下最終有價值的事物是什麼？
 
 這些事情並不是讓你的 Agent 進行深度研究就可以探索到的答案，而是每個人內心都得深深思索後，得出自己的結論。
