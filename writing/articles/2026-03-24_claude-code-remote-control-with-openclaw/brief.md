@@ -98,6 +98,6 @@
 ### Writing & Review (managed by later skills)
 - [x] First draft completed
 - [x] Fact-check completed
-- [ ] Review completed
-- [ ] Translations completed
+- [x] Review completed
+- [x] Translations completed
 - [ ] Finalized
