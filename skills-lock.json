@@ -4,7 +4,7 @@
     "article-preparation": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "2f70df6ddb7ce8ea750696b587fb29092ff7a518beccde4dbe10d737c558b1bb"
+      "computedHash": "83e395e6932c1a50b7dded3e1d0b0e80dd4530f5952f33f0b662f146eb0dc557"
     },
     "article-translation": {
       "source": "sadcoderlabs/writer-skills",
@@ -14,12 +14,12 @@
     "article-writing": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "ff3cea55726b24958d4ac0b6285404370bbd0a9781dd7723a024cd015eeee319"
+      "computedHash": "495d8f9fd5b051273951ede2879af8e29f111234d85006e6c1ec9952c21dc116"
     },
     "writing-management": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "afc1f1ee42dd801f8f78927f718a804a3909e4387a3877659375e5b7032f5dc7"
+      "computedHash": "03eea501bf5e95774f947e1f01704a14a7a8f16f76b179e019067568cc5edd20"
     }
   }
 }
