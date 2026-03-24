@@ -1,0 +1,29 @@
+---
+created_by: Yuren Ju
+---
+
+# Default
+
+## Voice & Tone
+對話式，像在跟同行工程師聊天。第一人稱，從自己的經歷出發。坦率面對不足——「邊學邊做」、「走了捷徑」、「被自己的 code 雷到」這類表述是正常的，不需要包裝。偶爾冒出生動的比喻（烙鐵焊接機械胸腔、偵探證據牆、溼婆跳舞），但不刻意堆砌。Emoji 少量使用。整體情緒溫度是平穩帶一點探索感，不亢奮也不冷淡。
+
+## Structure
+從具體的個人經歷或問題開場，不用抽象概念起頭。中段展開技術或方法的細節，不迴避複雜度。文章後半段有一個「視角轉向」——從具體經驗拉高到一個讀者沒想過的框架或觀點，這是核心手法。結尾不做摘要，而是往更大的方向延伸、回到人的層面、或用一句輕鬆的話收尾。
+
+## Anti-Patterns
+- 恐嚇式語氣：「你再不用 AI 就被淘汰了」、「你不怎樣就 XX 了」——絕對不用
+- 平鋪直敘的事實堆砌：只報導發生什麼，沒有作者的角度和判斷——這是「事實」不是「敘事」
+- 摘要式結尾：結尾不要重述文章講過的重點
+- 過度包裝：不隱藏實作中的問題、限制、或自己不懂的地方
+
+## Sentence-Level Preferences
+Not yet defined — will evolve through writing.
+
+## Signature Moves
+Not yet defined — will evolve through writing.
+
+## Examples
+Not yet defined — will evolve through writing.
+
+## Revision Checklist
+Not yet defined — will evolve through writing.

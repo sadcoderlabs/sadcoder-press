@@ -97,7 +97,7 @@
 
 ### Writing & Review (managed by later skills)
 - [ ] First draft completed
-- [ ] Fact-check completed
+- [x] Fact-check completed
 - [ ] Review completed
 - [ ] Translations completed
 - [ ] Finalized
