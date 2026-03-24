@@ -5,7 +5,7 @@
 - Author: Yuren Ju
 - Style: default
 - Date: 2026-03-24
-- Status: writing
+- Status: review
 - Original language: zh
 - Translations: en
 
@@ -96,7 +96,7 @@
 - [x] Ready for writing
 
 ### Writing & Review (managed by later skills)
-- [ ] First draft completed
+- [x] First draft completed
 - [x] Fact-check completed
 - [ ] Review completed
 - [ ] Translations completed
