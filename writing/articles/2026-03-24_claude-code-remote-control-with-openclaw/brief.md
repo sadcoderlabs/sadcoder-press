@@ -5,12 +5,15 @@
 - Author: Yuren Ju
 - Style: default
 - Date: 2026-03-24
-- Status: review
+- Status: published
 - Original language: zh
 - Translations: en
 
 ## Publishing
-<!-- Managed by publishing tools. Leave empty during writing. -->
+- Target: astro (sadcoder-press)
+- Published to: src/content/blog/2026-03-24_claude-code-remote-control-with-openclaw/
+- Published at: 2026-03-24
+- Slug: claude-code-remote-control-with-openclaw
 
 ## Target Audience
 - Who: 正在用 OpenClaw 或對 OpenClaw 有興趣的開發者
@@ -100,4 +103,4 @@
 - [x] Fact-check completed
 - [x] Review completed
 - [x] Translations completed
-- [ ] Finalized
+- [x] Finalized
