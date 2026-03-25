@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { getSlug } from '../../lib/utils';
 
 const lang = 'zh';
@@ -12,6 +12,11 @@ const blogPosts = (await getCollection('blog', ({ data }) => data.lang === lang 
 const socialPosts = (await getCollection('posts', ({ data }) => data.lang === lang && !data.draft))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
+
+const renderedSocial = await Promise.all(socialPosts.map(async (post) => {
+  const { Content } = await render(post);
+  return { post, Content };
+}));
 ---
 
 <Base title="首頁" lang={lang}>
@@ -34,18 +39,27 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
   <section>
     <h2 class="text-xl font-semibold mb-4">最新動態</h2>
     {socialPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">尚無動態。</p>}
-    <ul class="space-y-3">
-      {socialPosts.map((post) => (
-        <li>
-          <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
-          <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('zh-TW')}</span>
-          <div class="flex gap-1 mt-1">
+    <div class="space-y-6">
+      {renderedSocial.map(({ post, Content }) => (
+        <article class="border-b dark:border-gray-700 pb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-sm text-gray-500 dark:text-gray-400 hover:underline">
+              {post.data.date.toLocaleDateString('zh-TW')}
+            </a>
             {post.data.platform.map((p) => (
               <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{p}</span>
             ))}
           </div>
-        </li>
+          {post.data.title && (
+            <h3 class="text-lg font-bold mb-1">
+              <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
+            </h3>
+          )}
+          <div class="prose dark:prose-invert max-w-none text-sm">
+            <Content />
+          </div>
+        </article>
       ))}
-    </ul>
+    </div>
   </section>
 </Base>
