@@ -12,3 +12,9 @@ sadcoderlabs 是一個打造 AI agent 工具的團隊。我們相信未來人們
 
 ## Writing Style
 直接、對話式。段落簡短。用我們自己工作中的具體案例，而非假設情境。提到具體的工具、數字和時間線。避免公關式用語。
+
+## Social
+- Platforms: twitter
+- Social style guide: writing/social-style-guide.md
+- Default post language: zh
+- Translations: en
