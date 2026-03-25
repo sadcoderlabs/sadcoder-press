@@ -2,28 +2,42 @@
 
 ## Voice
 
-(Not yet defined — will evolve through writing.)
+- **實測口吻**：用「我在 VPS 上實際怎麼做」而不是抽象評論，貼文要能感受到作者親手做過
+- **工程判斷**：給明確判斷（例如「87 分像」），不用模糊的「很像」「差不多」
+- **克制結論**：用「看起來」「差別在」這種可討論語氣，不下絕對結論
 
 ## Structure
 
-(Not yet defined — will evolve through writing.)
+單則貼文建議 3 句骨架：
+1. **操作事實** — 做了什麼（具體操作、工具名稱）
+2. **結果量化** — 像幾分、快多少、差多少
+3. **觀點落點 + 連結** — 所以核心差異是什麼，附文章連結
 
 ## Rhetorical Patterns
 
-(Not yet defined — will evolve through writing.)
+- **對比句型**：「不是 X 做不到，而是 Y 還沒做」「差別不在能力，在注意力配置」
+- **橋接句型**：「用 A 橋接後，行為就接近 B」
 
 ## Opening Patterns
 
-(Not yet defined — will evolve through writing.)
+- 「在 [環境] 請 OpenClaw 做 [具體操作]，再用 [橋接手段]，結果 [量化結果]。」
+- 「一個 [最小改動] + 一個 [最小改動]，就接近 [目標體驗]。」
 
 ## Signature Vocabulary
 
-(Not yet defined — will evolve through writing.)
+高頻詞（建立辨識度）：
+- 橋接
+- 常駐服務
+- 幾分像
+- 基礎建設
+- 注意力放在哪裡
 
 ## Anti-Patterns
 
-(Not yet defined — will evolve through writing.)
+- 不用空泛形容詞（超強、革命性）
+- 不用行銷 CTA（快去看、必看）
+- 不用未交代來源的數字（若有數字要明示是主觀體感或實測）
 
 ## Reference Posts
 
-(Not yet defined — will evolve through writing.)
+- `posts/2026-03-25_claude-remote-control-openclaw.md` — 第一篇定稿貼文，風格規則從此篇提取
