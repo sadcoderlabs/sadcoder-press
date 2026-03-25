@@ -9,9 +9,11 @@ Publish completed articles from the writing workspace to the sadcoder-press Astr
 
 ## Paths
 
-- **Writing workspace**: `/root/projects/sadcoder-press/writing/articles/`
-- **Astro blog content**: `/root/projects/sadcoder-press/src/content/blog/`
-- **Astro posts content**: `/root/projects/sadcoder-press/src/content/posts/`
+- **Writing workspace**: `writing/articles/`
+- **Astro blog content**: `src/content/blog/`
+- **Astro posts content**: `src/content/posts/`
+
+All paths are relative to the repository root.
 
 ## Prerequisites
 
@@ -89,9 +91,9 @@ Set status to `published`. If a Publishing section doesn't exist, add one after 
 ### 8. Commit and push
 
 ```bash
-git -C /root/projects/sadcoder-press add -A
-git -C /root/projects/sadcoder-press commit -m "content: publish {slug} to blog"
-git -C /root/projects/sadcoder-press push origin main
+git add -A
+git commit -m "content: publish {slug} to blog"
+git push origin main
 ```
 
 ## Notes

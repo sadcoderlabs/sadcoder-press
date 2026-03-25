@@ -9,8 +9,10 @@ Publish completed social media posts from the writing workspace to the sadcoder-
 
 ## Paths
 
-- **Writing posts**: `/root/projects/sadcoder-press/writing/posts/`
-- **Astro posts content**: `/root/projects/sadcoder-press/src/content/posts/`
+- **Writing posts**: `writing/posts/`
+- **Astro posts content**: `src/content/posts/`
+
+All paths are relative to the repository root.
 
 ## Prerequisites
 
@@ -61,7 +63,7 @@ Notes:
 ### 5. Build Verification
 
 ```bash
-cd /root/projects/sadcoder-press && npm run build
+npm run build
 ```
 
 If build fails, fix the issue and retry.
@@ -73,9 +75,9 @@ Add `published_to_press: true` to the frontmatter of `writing/posts/{slug}.md`.
 ### 7. Commit and Push
 
 ```bash
-git -C /root/projects/sadcoder-press add -A
-git -C /root/projects/sadcoder-press commit -m "content: publish post {slug} to press"
-git -C /root/projects/sadcoder-press push origin main
+git add -A
+git commit -m "content: publish post {slug} to press"
+git push origin main
 ```
 
 ## Publishing to X (Separate Action)
@@ -91,9 +93,9 @@ This skill does NOT publish to social platforms. When the user wants to publish 
 4. Write `publishedUrl.twitter: "{url}"` to BOTH `en.md` and `zh.md` frontmatter
 5. Commit and push:
    ```bash
-   git -C /root/projects/sadcoder-press add -A
-   git -C /root/projects/sadcoder-press commit -m "meta: add twitter url for post {slug}"
-   git -C /root/projects/sadcoder-press push origin main
+   git add -A
+   git commit -m "meta: add twitter url for post {slug}"
+   git push origin main
    ```
 
 ## Notes
