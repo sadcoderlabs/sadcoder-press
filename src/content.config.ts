@@ -16,7 +16,7 @@ const blog = defineCollection({
 const posts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     date: z.coerce.date(),
     platform: z.array(z.enum(['twitter', 'threads', 'bluesky', 'mastodon'])),
     lang: z.enum(['en', 'zh']),

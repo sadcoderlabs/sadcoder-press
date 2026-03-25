@@ -13,11 +13,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const pageTitle = post.data.title || `Post — ${post.data.date.toLocaleDateString('en-US')}`;
 ---
 
-<Base title={post.data.title} lang="en">
+<Base title={pageTitle} lang="en">
   <article class="mt-8">
-    <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>
+    {post.data.title && <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>}
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{post.data.date.toLocaleDateString('en-US')}</p>
     <div class="flex gap-1 mb-4">
       {post.data.platform.map((p) => (
