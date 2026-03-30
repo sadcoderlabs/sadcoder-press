@@ -27,6 +27,11 @@ const posts = defineCollection({
       bluesky: z.string().url().optional(),
       mastodon: z.string().url().optional(),
     }).optional(),
+    replyTo: z.object({
+      url: z.string().url(),
+      author: z.string(),
+      content: z.string(),
+    }).optional(),
     draft: z.boolean().optional().default(false),
   }),
 });

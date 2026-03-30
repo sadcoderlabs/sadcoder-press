@@ -1,0 +1,236 @@
+- id: "2037077642625655077"
+  url: https://x.com/clawmindio/status/2037077642625655077
+  author: clawmindio
+  content: |-
+    What's the one automation pattern your AI agent can't live without?
+
+    Drop it below 👇 or share it on ClawMind so other agents can learn from it too.
+
+    https://t.co/NXolP5q9Hp
+
+    #ClawMind #AIagents #BuildInPublic #moltbook #openclaw #clawbot #clawdbot
+  summary: ""
+  lang: en
+  favorite_count: 5
+  conversation_count: 2
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:35.740Z
+- id: "2034903406058319890"
+  url: https://x.com/clawmindio/status/2034903406058319890
+  author: clawmindio
+  content: |-
+    What's the weirdest problem your AI agent solved that you didn't expect it to?
+
+    Drop your stories below 👇 We're collecting the best ones on ClawMind.
+
+    https://t.co/NXolP5q9Hp
+
+    #ClawMind #AIagents #BuildInPublic #moltbook #openclaw #clawbot #clawdbot
+  summary: ""
+  lang: en
+  favorite_count: 17
+  conversation_count: 16
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:35.905Z
+- id: "2035019947911651372"
+  url: https://x.com/akagg07/status/2035019947911651372
+  author: akagg07
+  content: |-
+    We built an autonomous AI agent that reads SEC filings so you don’t have to Meet AFI.
+    7 TinyFish agents, crisis detection, contradiction flags, news sentiment tracking, insider &amp; congressional trade monitoring, live alerts.
+
+    @Tiny_Fish #TinyFishAccelerator #BuildInPublic https://t.co/2bNQOcWjHG
+  summary: ""
+  lang: en
+  favorite_count: 8
+  conversation_count: 2
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.068Z
+- id: "2035352690234966429"
+  url: https://x.com/devajibola/status/2035352690234966429
+  author: devajibola
+  content: |-
+    an AI agent has a wallet address now. two actually — owner and validator, both live on Arc Testnet
+    ERC-8004 means agents can build financial reputation that carries across apps. no more trust resets
+    AgentVault is becoming real 🔥 @arc_network @circle
+    #BuildInPublic #Web3 #Arc https://t.co/sQIt00Ugb7
+  summary: ""
+  lang: en
+  favorite_count: 5
+  conversation_count: 1
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.230Z
+- id: "2038529153297965293"
+  url: https://x.com/gitlawb/status/2038529153297965293
+  author: gitlawb
+  content: |-
+    The Gitlawb plugin is now available in @opencode 
+
+    AI agents can now earn money writing code on decentralized git. Let agents browse bounties, claim tasks, push code, and get paid trustlessly via smart contract.
+
+    One line to install. 17 tools. Zero accounts.
+
+    $ npm i
+  summary: ""
+  lang: en
+  favorite_count: 6
+  conversation_count: 0
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.395Z
+- id: "2038535497140617254"
+  url: https://x.com/nyk_builderz/status/2038535497140617254
+  author: nyk_builderz
+  content: |-
+    Most people use Claude Code like a chatbot.
+    Top teams use it like an operating system.
+
+    I mapped the full 2026 stack:
+    CLAUDE.md, skills, agents, hooks, MCP, worktrees, permissions — and when each one actually matters.
+
+    What's the first feature you're adding this week?
+  summary: ""
+  lang: en
+  favorite_count: 9
+  conversation_count: 0
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.579Z
+- id: "2038532093454725162"
+  url: https://x.com/navi_protocol/status/2038532093454725162
+  author: navi_protocol
+  content: |-
+    NAVI MCP is now live.
+
+    A new way to access NAVI through AI, covering lending, swaps, bridging, wallet data, and transaction insights.
+
+    It organizes fragmented on-chain data into something AI can understand, so you can just ask and get answers that actually help you decide.
+
+    Check https://t.co/1u1Sq98iNX
+  summary: ""
+  lang: en
+  favorite_count: 13
+  conversation_count: 5
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.732Z
+- id: "2038510725271069089"
+  url: https://x.com/RodmanAi/status/2038510725271069089
+  author: RodmanAi
+  content: |-
+    If you're using Claude Code…
+
+    Stop scrolling. Read this.
+
+    Most people use it wrong.
+
+    They treat it like a chatbot.
+
+    But Claude Code is a full AI system if you know how to use:
+
+    • Commands
+    • Agents
+    • Memory
+    • MCP
+    • Workflows
+
+    This repo puts EVERYTHING together 👇
+
+    (No fluff. https://t.co/G4KUCad2Ew
+  summary: ""
+  lang: en
+  favorite_count: 19
+  conversation_count: 5
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:36.902Z
+- id: "2038500844518195357"
+  url: https://x.com/EOEboh/status/2038500844518195357
+  author: EOEboh
+  content: |-
+    AI engineering concepts:
+    rank by how well you understand them:
+
+    [ ] Embeddings and vector search
+    [ ] RAG architecture
+    [ ] Prompt engineering
+    [ ] Token optimisation
+    [ ] Streaming with SSE
+    [ ] Fine-tuning vs RAG tradeoffs
+    [ ] AI output validation
+    [ ] Agentic workflows
+
+    What's your
+  summary: ""
+  lang: en
+  favorite_count: 28
+  conversation_count: 2
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:37.062Z
+- id: "2038533361002549558"
+  url: https://x.com/0xJigen/status/2038533361002549558
+  author: 0xJigen
+  content: |-
+    Everyone on L2 is competing with each other for volume these days.
+
+    Meanwhile @base is becoming the home for AI agents actually doing stuff onchain.
+
+    + x402 payments blowing up with machines paying machines with USDC
+    + Agent wallets now come with built-in compliance
+    + AI
+  summary: ""
+  lang: en
+  favorite_count: 60
+  conversation_count: 10
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:37.268Z
+- id: "2038469522093687127"
+  url: https://x.com/FacticityMage/status/2038469522093687127
+  author: FacticityMage
+  content: |-
+    Facticity AI MCP server is now live on Smithery
+
+    Add real-time fact-checking (text, audio, video) to your AI agents and workflows.
+
+    https://t.co/F0LhHVtSlr
+  summary: ""
+  lang: en
+  favorite_count: 8
+  conversation_count: 0
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:37.428Z
+- id: "2036925941390135321"
+  url: https://x.com/sandy_veliz/status/2036925941390135321
+  author: sandy_veliz
+  content: |-
+    I’ve been struggling with AI agents forgetting context in long sessions. RAG helps, but it feels like a patch.
+
+    My Idea: What if we stop using chat history as memory and use a real-time Knowledge Graph instead? 🧵👇
+
+    #AIAgents #BuildInPublic #Python #LLMs
+  summary: ""
+  lang: en
+  favorite_count: 6
+  conversation_count: 7
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T08:51:37.588Z

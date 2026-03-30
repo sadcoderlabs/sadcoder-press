@@ -25,6 +25,12 @@ const pageTitle = post.data.title || `Post — ${post.data.date.toLocaleDateStri
         <span class="text-xs bg-blue-900 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded">{p}</span>
       ))}
     </div>
+    {post.data.replyTo && (
+      <a href={post.data.replyTo.url} target="_blank" rel="noopener noreferrer" class="block mb-4 px-3 py-2 border-l-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 rounded-r text-sm no-underline hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <span class="text-gray-500 dark:text-gray-400 text-xs">↩ In reply to <span class="font-medium text-gray-700 dark:text-gray-300">@{post.data.replyTo.author}</span></span>
+        <p class="text-gray-600 dark:text-gray-400 mt-1 mb-0 line-clamp-3 text-xs leading-relaxed">{post.data.replyTo.content}</p>
+      </a>
+    )}
     <div class="prose dark:prose-invert max-w-none mb-6">
       <Content />
     </div>
