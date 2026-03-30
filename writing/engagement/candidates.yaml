@@ -1,3 +1,22 @@
+- id: "2038527364812997013"
+  url: https://x.com/DomOnChain/status/2038527364812997013
+  author: DomOnChain
+  content: |-
+    AI agents aren’t just assisting anymore, they’re starting to execute
+
+    but without money they can’t really do much...
+
+    AgentPay, a new AI product by @worldlibertyfi , gives agents a way to actually operate with USD1 within rules, limits &amp; approvals
+
+    here’s a simple step-by-step of https://t.co/DFUV5McRjR
+  summary: ""
+  lang: en
+  favorite_count: 78
+  conversation_count: 33
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:57.663Z
 - id: "2037077642625655077"
   url: https://x.com/clawmindio/status/2037077642625655077
   author: clawmindio
@@ -16,7 +35,208 @@
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:35.740Z
+  discoveredAt: 2026-03-30T09:31:57.826Z
+- id: "2038525434137067576"
+  url: https://x.com/tonyGewrit/status/2038525434137067576
+  author: tonyGewrit
+  content: |-
+    memescope monday … but with AI agents deployed.
+
+    @spawnagents locked on rn.
+  summary: ""
+  lang: en
+  favorite_count: 13
+  conversation_count: 2
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:57.988Z
+- id: "2038099404981481577"
+  url: https://x.com/Alacritic_Super/status/2038099404981481577
+  author: Alacritic_Super
+  content: |-
+    Most developers struggle to connect AI agents with tools.
+
+    Every integration = custom code.
+
+    That does not scale.
+
+    Meet mcp-use.
+
+    https://t.co/ZPnKYmklsZ
+
+    An open-source toolkit that makes it easy to interact with MCP (Model Context Protocol) servers using custom agents. 
+
+    Why it https://t.co/1pT2TiMRZ4
+  summary: ""
+  lang: en
+  favorite_count: 4
+  conversation_count: 3
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.154Z
+- id: "2038135018384437431"
+  url: https://x.com/swatx18/status/2038135018384437431
+  author: swatx18
+  content: |-
+    TL;DR on MCP:
+
+    ✅ Open standard (open-source by Anthropic)
+    ✅ Works with all major LLMs
+    ✅ Local or remote servers
+    ✅ Tool calling + data access + prompt templates
+    ✅ Backbone of the agentic web
+
+    Start → https://t.co/VtRJ5tkTwQ
+
+    Follow for more AI dev deep dives 🧵 (6/6)
+  summary: ""
+  lang: en
+  favorite_count: 1
+  conversation_count: 0
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.316Z
+- id: "2038533361002549558"
+  url: https://x.com/0xJigen/status/2038533361002549558
+  author: 0xJigen
+  content: |-
+    Everyone on L2 is competing with each other for volume these days.
+
+    Meanwhile @base is becoming the home for AI agents actually doing stuff onchain.
+
+    + x402 payments blowing up with machines paying machines with USDC
+    + Agent wallets now come with built-in compliance
+    + AI
+  summary: ""
+  lang: en
+  favorite_count: 60
+  conversation_count: 11
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.521Z
+- id: "2038529989008589141"
+  url: https://x.com/joezzyweb3/status/2038529989008589141
+  author: joezzyweb3
+  content: |-
+    THE FUTURE OF AI AGENTS
+
+    Space hosted by @pukerrainbrow himself 
+
+    With 4 other amazing guests but I'm highlighting @RishAhuja and one of the most fascinating part of what he said
+
+    "We have enough tools than in 2009, what we need is good quality data"
+
+    Timestamp 
+    0:06 - 0:32 ➠ https://t.co/zZ8ScA0opF
+  summary: ""
+  lang: en
+  favorite_count: 11
+  conversation_count: 9
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.685Z
+- id: "2034946111694131639"
+  url: https://x.com/techNmak/status/2034946111694131639
+  author: techNmak
+  content: |-
+    Learning AI engineering in 2026.
+
+    What most people do:
+    → Jump to agents
+    → Skip foundations
+    → Ignore MLOps
+    → Wonder why nothing works
+
+    What this roadmap shows:
+
+    1. Foundation (Python, APIs, clean code)
+    2. Semantic intelligence (embeddings, vector DBs)
+    3. RAG (grounded outputs) https://t.co/0IPorqIXae
+  summary: ""
+  lang: en
+  favorite_count: 601
+  conversation_count: 16
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.837Z
+- id: "2038523298481639932"
+  url: https://x.com/cangg_l/status/2038523298481639932
+  author: cangg_l
+  content: |-
+    From NVIDIA GTC to Quantum x AI: why I think @quipnetwork is a hidden gem pre-TGE
+
+    GTC 2026 ain’t about AI anymore, it’s how Jensen sees compute as an economy. Once tokens = compute output, AI feels like just surface, real game’s underneath.
+
+    Looking at AI agents like Bittensor, https://t.co/6WrVHkux4D
+  summary: ""
+  lang: en
+  favorite_count: 29
+  conversation_count: 28
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:58.997Z
+- id: "2038526818421006612"
+  url: https://x.com/BJauhi/status/2038526818421006612
+  author: BJauhi
+  content: |-
+    The bridge between AI Agents and Real-World Assets (RWA) is finally here 🔥
+
+    Excited to see @SelanetAI partnering with @theSIXnetwork 
+
+    We’re talking about bringing massive liquidity from real estate &amp; commodities on-chain, powered by a decentralized AI execution layer.
+
+    This is https://t.co/X7JaLyBadO
+  summary: ""
+  lang: en
+  favorite_count: 34
+  conversation_count: 32
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:59.198Z
+- id: "2037569595297476803"
+  url: https://x.com/dimzhuk/status/2037569595297476803
+  author: dimzhuk
+  content: |-
+    @aakashgupta built Agentfy on MCP then rebuilt without it
+
+    MCP looked clean in demos. in prod it ate context before the agent did anything useful.
+
+    switched to direct API calls. half the tokens, same output, easier to debug at 3am
+
+    the abstraction solved a problem the CLI never had
+  summary: ""
+  lang: en
+  favorite_count: 0
+  conversation_count: 0
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:59.395Z
+- id: "2036445681557082392"
+  url: https://x.com/arbitrum/status/2036445681557082392
+  author: arbitrum
+  content: |-
+    Agentic commerce has arrived on the Arbitrum Platform!
+
+    With @virtuals_io, AI agents can coordinate, transact, and operate as autonomous businesses powered by Arbitrum's low costs, deep liquidity and reliable execution.
+
+    Let’s scale the agentic economy together.
+  summary: ""
+  lang: en
+  favorite_count: 353
+  conversation_count: 44
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:59.583Z
 - id: "2034903406058319890"
   url: https://x.com/clawmindio/status/2034903406058319890
   author: clawmindio
@@ -35,7 +255,384 @@
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:35.905Z
+  discoveredAt: 2026-03-30T09:31:59.750Z
+- id: "2038537322912731295"
+  url: https://x.com/savvyonchain/status/2038537322912731295
+  author: savvyonchain
+  content: |-
+    5 essential skills software engineers (vibe coders😂) Should Learn in 2026
+
+    ➤ System design + architecture for AI-powered applications
+
+    ➤ AI-augmented development &amp; prompt engineering
+
+    ➤ Building &amp; integrating AI agents + RAG systems
+
+    Details soon…
+  summary: ""
+  lang: en
+  favorite_count: 22
+  conversation_count: 21
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:31:59.986Z
+- id: "2035774898392518863"
+  url: https://x.com/RoundtableSpace/status/2035774898392518863
+  author: RoundtableSpace
+  content: |-
+    Chrome quietly shipped a feature that lets AI agents use a browser you're already logged into
+
+    - Skip CAPTCHA &amp; re-logins entirely
+    - Agents test with your own auth
+    - Works best with Chrome Dev Tool MCP
+
+    No more authentication headaches for browser agents
+
+    https://t.co/TczCuEt4uO
+  summary: ""
+  lang: en
+  favorite_count: 1111
+  conversation_count: 77
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:00.143Z
+- id: "2038197299147370707"
+  url: https://x.com/0xinfini/status/2038197299147370707
+  author: 0xinfini
+  content: |-
+    AI × Crypto is entering a new era.
+
+    We are hosting a special Founders’ Talk on:
+    2026 AI × Crypto Thesis: The Agent Economy
+    As AI agents evolve from content engines to economic actors, the next question is clear:
+    how will they earn, transact, and operate at scale?
+
+    Join us with an https://t.co/MU2so2eij5
+  summary: ""
+  lang: en
+  favorite_count: 36
+  conversation_count: 11
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:00.302Z
+- id: "2037175372307943805"
+  url: https://x.com/agentcommunity_/status/2037175372307943805
+  author: agentcommunity_
+  content: |-
+    @openclaw @NVIDIAAIDev @rohanpaul_ai The industry is pivoting from instruction-heavy prompts to "toolbox" architectures using the Model Context Protocol (MCP). Developers are replacing stale context with dynamic Python scripts and Figma integrations.
+    @bcherny
+  summary: ""
+  lang: en
+  favorite_count: 1
+  conversation_count: 2
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:00.526Z
+- id: "2038432270655410624"
+  url: https://x.com/RoundtableSpace/status/2038432270655410624
+  author: RoundtableSpace
+  content: |-
+    THE LARGEST DATABASE FOR AI AGENTS IS ABOUT TO GET OPEN SOURCED.
+
+    47,000 verified agent actions, 250+ apps, and one connection that can plug into almost any workflow.
+
+    https://t.co/ttQuZ10GYZ
+  summary: ""
+  lang: en
+  favorite_count: 228
+  conversation_count: 36
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:00.682Z
+- id: "2038439820427731346"
+  url: https://x.com/RoundtableSpace/status/2038439820427731346
+  author: RoundtableSpace
+  content: |-
+    AI AGENTS CAN NOW CREATE AND ANIMATE SPRITES FOR YOUR VIBE CODED GAME.
+
+    Connect an MCP capable agent, tell it what to make, and it can generate, inspect, and regenerate assets until they’re right.
+
+    https://t.co/oF8wLTDawq
+  summary: ""
+  lang: en
+  favorite_count: 188
+  conversation_count: 21
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:00.843Z
+- id: "2038521650829013122"
+  url: https://x.com/TabiVibe/status/2038521650829013122
+  author: TabiVibe
+  content: |-
+    AI agents are becoming economic actors.
+    The rails will matter.
+
+    See you there. 👇
+    https://t.co/vaIglSwCe3
+  summary: ""
+  lang: en
+  favorite_count: 32
+  conversation_count: 17
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.052Z
+- id: "2036517448112021863"
+  url: https://x.com/splinetool/status/2036517448112021863
+  author: splinetool
+  content: |-
+    Today, we're releasing Omma.
+
+    Create 3D, Websites, and Apps with AI agents.
+
+    Start now on https://t.co/Q6aAIWZYyJ
+    Follow @omma_ai https://t.co/i8O4XYvBPo
+  summary: ""
+  lang: en
+  favorite_count: 4150
+  conversation_count: 178
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.213Z
+- id: "2036321520222654508"
+  url: https://x.com/cryptofundix/status/2036321520222654508
+  author: cryptofundix
+  content: |-
+    Built something new a Canva-like tool for QR-based NFTs.
+
+    Create identity, AI agent &amp; asset NFTs that actually do something when scanned.
+
+    No login. No backend. Fully local.
+
+    Would love feedback from Web3 builders 👇  
+    https://t.co/35AidjzOtE  
+
+    #buildinpublic https://t.co/t92rrPnXrv
+  summary: ""
+  lang: en
+  favorite_count: 8
+  conversation_count: 1
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.381Z
+- id: "2035171720945115469"
+  url: https://x.com/levie/status/2035171720945115469
+  author: levie
+  content: |-
+    It is quite ridiculous how agile you have to be with your AI agent stack right now. Whatever you spent 6 months perfecting 12 months ago probably is already out of date and you’re better off doing a reset than trying to resuscitate it architecturally.
+
+    And what’s interesting is
+  summary: ""
+  lang: en
+  favorite_count: 458
+  conversation_count: 63
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.568Z
+- id: "2038481345349869908"
+  url: https://x.com/SelanetAI/status/2038481345349869908
+  author: SelanetAI
+  content: |-
+    Selanet is partnering with @theSIXnetwork.
+
+    SIX Network builds infrastructure for real-world asset (RWA) tokenization, enabling businesses to digitize assets like real estate and commodities on-chain with transparency and security.
+
+    This partnership brings Selanet’s AI agent https://t.co/8gyyaKKMlL
+  summary: ""
+  lang: en
+  favorite_count: 27
+  conversation_count: 13
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.732Z
+- id: "2038258626641719740"
+  url: https://x.com/RoundtableSpace/status/2038258626641719740
+  author: RoundtableSpace
+  content: |-
+    Someone just open-sourced the world's largest integration database for AI agents.
+
+    - 47,000 agentic actions across 250+ apps
+    - Connect to Slack, GitHub, Gmail, Stripe, Discord, Google Sheets and more
+    - Every action is verified your agent never hallucinates API knowledge again
+    - https://t.co/8xpMfcF4Gm
+  summary: ""
+  lang: en
+  favorite_count: 809
+  conversation_count: 88
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:01.896Z
+- id: "2038538335157666225"
+  url: https://x.com/TimHaldorsson/status/2038538335157666225
+  author: TimHaldorsson
+  content: |-
+    Espressio AI is making waves already
+
+    I am planning a rollout series of articles that will be published on various marketing/SaaS and fintech websites. 
+
+    here we had an initial one focused on AI agents for marketing. 
+
+    @EspressioAI is going to change the way marketing works with https://t.co/DQPLD9izGt
+  summary: ""
+  lang: en
+  favorite_count: 15
+  conversation_count: 7
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.062Z
+- id: "2036435490988236857"
+  url: https://x.com/virtuals_io/status/2036435490988236857
+  author: virtuals_io
+  content: |-
+    Virtuals is powering agent commerce on Arbitrum
+
+    One of the most liquid ecosystems in DeFi. Virtuals is building the commerce layer for agents to transact natively on @arbitrum https://t.co/QHxef8e9at
+  summary: ""
+  lang: en
+  favorite_count: 367
+  conversation_count: 50
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.219Z
+- id: "2035352690234966429"
+  url: https://x.com/devajibola/status/2035352690234966429
+  author: devajibola
+  content: |-
+    an AI agent has a wallet address now. two actually — owner and validator, both live on Arc Testnet
+    ERC-8004 means agents can build financial reputation that carries across apps. no more trust resets
+    AgentVault is becoming real 🔥 @arc_network @circle
+    #BuildInPublic #Web3 #Arc https://t.co/sQIt00Ugb7
+  summary: ""
+  lang: en
+  favorite_count: 6
+  conversation_count: 1
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.387Z
+- id: "2034720552909496757"
+  url: https://x.com/ZachWitkoff/status/2034720552909496757
+  author: ZachWitkoff
+  content: |-
+    Agents are starting to execute, not just assist.
+
+    But they can’t truly act without native money.
+
+    USD1 is that missing layer — programmable, permissioned, and designed for a world where software moves capital as easily as it moves data.
+
+    We’re kicking that off today with
+  summary: ""
+  lang: en
+  favorite_count: 203
+  conversation_count: 56
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.582Z
+- id: "2035129780321050735"
+  url: https://x.com/Shruti_0810/status/2035129780321050735
+  author: Shruti_0810
+  content: |-
+    You are a genius if you know all of this. If not, tutorials are included!
+
+    AI Agents – https://t.co/wjB9TNw8Wd
+
+    Context – https://t.co/G8KPLwk0h1
+
+    MCP – https://t.co/c2GbkUtSET
+
+    Claude Code – https://t.co/gOrcZP9us4
+
+    APIs – https://t.co/vblIPAMiAx
+
+    Cursor –
+  summary: ""
+  lang: en
+  favorite_count: 577
+  conversation_count: 2
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.760Z
+- id: "2038528996061671474"
+  url: https://x.com/RSV281083/status/2038528996061671474
+  author: RSV281083
+  content: Noise isn’t just another feed. They’re building the UX that finally feels native for traders while still giving normal people the kind of insights you usually only get if you’re glued to the timeline 24/7. This week they’re even using Notion AI agents internally to cut the boring https://t.co/S8F7oxkiGD
+  summary: ""
+  lang: en
+  favorite_count: 11
+  conversation_count: 5
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:02.920Z
+- id: "2038470019483410869"
+  url: https://x.com/RoundtableSpace/status/2038470019483410869
+  author: RoundtableSpace
+  content: |-
+    CORE(.)SO IS REBUILDING THE MODERN WORKSPACE AROUND AI AGENTS.
+
+    It takes the best parts of tools like Slack, Linear, and Notion, then recenters everything around shared context and agent powered work.
+
+    https://t.co/HtYTEn45KO
+  summary: ""
+  lang: en
+  favorite_count: 58
+  conversation_count: 7
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:03.082Z
+- id: "2035718145692819590"
+  url: https://x.com/RoundtableSpace/status/2035718145692819590
+  author: RoundtableSpace
+  content: |-
+    Someone built a model-free document parser for AI agents.
+
+    - No GPU required, processes 500 pages in 2s
+    - Accurate than PyPDF, PyMuPDF &amp; Markdown
+    - Supports 50+ file formats
+    - Plug &amp; play with any agent
+
+    Open-source and completely free.
+
+    https://t.co/8OHyKJNu4i
+  summary: ""
+  lang: en
+  favorite_count: 838
+  conversation_count: 43
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:03.247Z
+- id: "2037260480562229557"
+  url: https://x.com/base/status/2037260480562229557
+  author: base
+  content: |-
+    Ever been curious as to how we make our assets?
+
+    Our @Creative0ffice built a custom platform (using the latest agentic coding tools of course) that allows anybody on the team to generate them! https://t.co/xWUnFzqgbz
+  summary: ""
+  lang: en
+  favorite_count: 360
+  conversation_count: 48
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:03.439Z
 - id: "2035019947911651372"
   url: https://x.com/akagg07/status/2035019947911651372
   author: akagg07
@@ -51,186 +648,85 @@
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.068Z
-- id: "2035352690234966429"
-  url: https://x.com/devajibola/status/2035352690234966429
-  author: devajibola
-  content: |-
-    an AI agent has a wallet address now. two actually — owner and validator, both live on Arc Testnet
-    ERC-8004 means agents can build financial reputation that carries across apps. no more trust resets
-    AgentVault is becoming real 🔥 @arc_network @circle
-    #BuildInPublic #Web3 #Arc https://t.co/sQIt00Ugb7
+  discoveredAt: 2026-03-30T09:32:03.603Z
+- id: "2036434766661296602"
+  url: https://x.com/figma/status/2036434766661296602
+  author: figma
+  content: Now you can use AI agents to design directly on the Figma canvas, with our new use_figma MCP tool and skills to teach them. Open beta starts today. https://t.co/AQZsFWvvXQ
   summary: ""
   lang: en
-  favorite_count: 5
-  conversation_count: 1
+  favorite_count: 10120
+  conversation_count: 484
+  verified: true
+  note_tweet: false
+  searchQuery: ""
+  discoveredAt: 2026-03-30T09:32:03.766Z
+- id: "2036477814656876966"
+  url: https://x.com/teneo_protocol/status/2036477814656876966
+  author: teneo_protocol
+  content: |-
+    Agents were once limited to calling APIs.
+    Now agents participate in the economy.
+
+    The missing element for autonomous agents was always payments.
+
+    Now agents transact natively on the internet using x402, enabling autonomous payments between agents and services.
+
+    Agent Stack:
+    🦞 https://t.co/dC83w7gw4A
+  summary: ""
+  lang: en
+  favorite_count: 885
+  conversation_count: 129
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.230Z
-- id: "2038529153297965293"
-  url: https://x.com/gitlawb/status/2038529153297965293
-  author: gitlawb
+  discoveredAt: 2026-03-30T09:32:03.931Z
+- id: "2037805497214980111"
+  url: https://x.com/__tosh/status/2037805497214980111
+  author: __tosh
   content: |-
-    The Gitlawb plugin is now available in @opencode 
+    @arvidkahl it's more about the agent user than the human user
 
-    AI agents can now earn money writing code on decentralized git. Let agents browse bounties, claim tasks, push code, and get paid trustlessly via smart contract.
+    llm+agent combo is good at composing command line tools
 
-    One line to install. 17 tools. Zero accounts.
+    tool1 | tool 2 | tool 3 =&gt; result
 
-    $ npm i
+    that is extremely token efficient compared to when the agent has to use mcp to call each tool
+
+    i'm sure there is a way to adapt mcp to
   summary: ""
   lang: en
-  favorite_count: 6
+  favorite_count: 2
   conversation_count: 0
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.395Z
-- id: "2038535497140617254"
-  url: https://x.com/nyk_builderz/status/2038535497140617254
-  author: nyk_builderz
+  discoveredAt: 2026-03-30T09:32:04.108Z
+- id: "2035699524295909652"
+  url: https://x.com/Aurimas_Gr/status/2035699524295909652
+  author: Aurimas_Gr
   content: |-
-    Most people use Claude Code like a chatbot.
-    Top teams use it like an operating system.
+    My latest newsletter episode on 𝗦𝘁𝗮𝘁𝗲 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗶𝗻 𝟮𝟬𝟮𝟲 is out.
 
-    I mapped the full 2026 stack:
-    CLAUDE.md, skills, agents, hooks, MCP, worktrees, permissions — and when each one actually matters.
-
-    What's the first feature you're adding this week?
+    Most agent failures come from poor context, not weak models. Eight months after the Manus and Anthropic posts that put context engineering on the map, the patterns have https://t.co/Gsu6rWKcNY
   summary: ""
   lang: en
-  favorite_count: 9
-  conversation_count: 0
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.579Z
-- id: "2038532093454725162"
-  url: https://x.com/navi_protocol/status/2038532093454725162
-  author: navi_protocol
-  content: |-
-    NAVI MCP is now live.
-
-    A new way to access NAVI through AI, covering lending, swaps, bridging, wallet data, and transaction insights.
-
-    It organizes fragmented on-chain data into something AI can understand, so you can just ask and get answers that actually help you decide.
-
-    Check https://t.co/1u1Sq98iNX
-  summary: ""
-  lang: en
-  favorite_count: 13
-  conversation_count: 5
+  favorite_count: 300
+  conversation_count: 17
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.732Z
-- id: "2038510725271069089"
-  url: https://x.com/RodmanAi/status/2038510725271069089
-  author: RodmanAi
-  content: |-
-    If you're using Claude Code…
-
-    Stop scrolling. Read this.
-
-    Most people use it wrong.
-
-    They treat it like a chatbot.
-
-    But Claude Code is a full AI system if you know how to use:
-
-    • Commands
-    • Agents
-    • Memory
-    • MCP
-    • Workflows
-
-    This repo puts EVERYTHING together 👇
-
-    (No fluff. https://t.co/G4KUCad2Ew
+  discoveredAt: 2026-03-30T09:32:04.272Z
+- id: "2035173492447224237"
+  url: https://x.com/karpathy/status/2035173492447224237
+  author: karpathy
+  content: "@RhysSullivan I'm not very happy with the code quality and I think agents bloat abstractions, have poor code aesthetics, are very prone to copy pasting code blocks and it's a mess, but at this point I stopped fighting it too hard and just moved on. The agents do not listen to my instructions"
   summary: ""
   lang: en
-  favorite_count: 19
-  conversation_count: 5
+  favorite_count: 4311
+  conversation_count: 250
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:36.902Z
-- id: "2038500844518195357"
-  url: https://x.com/EOEboh/status/2038500844518195357
-  author: EOEboh
-  content: |-
-    AI engineering concepts:
-    rank by how well you understand them:
-
-    [ ] Embeddings and vector search
-    [ ] RAG architecture
-    [ ] Prompt engineering
-    [ ] Token optimisation
-    [ ] Streaming with SSE
-    [ ] Fine-tuning vs RAG tradeoffs
-    [ ] AI output validation
-    [ ] Agentic workflows
-
-    What's your
-  summary: ""
-  lang: en
-  favorite_count: 28
-  conversation_count: 2
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:37.062Z
-- id: "2038533361002549558"
-  url: https://x.com/0xJigen/status/2038533361002549558
-  author: 0xJigen
-  content: |-
-    Everyone on L2 is competing with each other for volume these days.
-
-    Meanwhile @base is becoming the home for AI agents actually doing stuff onchain.
-
-    + x402 payments blowing up with machines paying machines with USDC
-    + Agent wallets now come with built-in compliance
-    + AI
-  summary: ""
-  lang: en
-  favorite_count: 60
-  conversation_count: 10
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:37.268Z
-- id: "2038469522093687127"
-  url: https://x.com/FacticityMage/status/2038469522093687127
-  author: FacticityMage
-  content: |-
-    Facticity AI MCP server is now live on Smithery
-
-    Add real-time fact-checking (text, audio, video) to your AI agents and workflows.
-
-    https://t.co/F0LhHVtSlr
-  summary: ""
-  lang: en
-  favorite_count: 8
-  conversation_count: 0
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:37.428Z
-- id: "2036925941390135321"
-  url: https://x.com/sandy_veliz/status/2036925941390135321
-  author: sandy_veliz
-  content: |-
-    I’ve been struggling with AI agents forgetting context in long sessions. RAG helps, but it feels like a patch.
-
-    My Idea: What if we stop using chat history as memory and use a real-time Knowledge Graph instead? 🧵👇
-
-    #AIAgents #BuildInPublic #Python #LLMs
-  summary: ""
-  lang: en
-  favorite_count: 6
-  conversation_count: 7
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T08:51:37.588Z
+  discoveredAt: 2026-03-30T09:32:04.446Z
