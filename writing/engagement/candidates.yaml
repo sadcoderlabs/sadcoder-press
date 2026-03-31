@@ -1,520 +1,188 @@
-- id: "2038527364812997013"
-  url: https://x.com/DomOnChain/status/2038527364812997013
-  author: DomOnChain
+- id: "2038938131198796071"
+  url: https://x.com/AndrewBolis/status/2038938131198796071
+  author: AndrewBolis
   content: |-
-    AI agents aren’t just assisting anymore, they’re starting to execute
+    There are 3 ways you can use AI in your workflows.
 
-    but without money they can’t really do much...
+    Non-Agentic (prompts), AI Agents and Agentic AI.
 
-    AgentPay, a new AI product by @worldlibertyfi , gives agents a way to actually operate with USD1 within rules, limits &amp; approvals
+    Each works differently and has specific use cases.
 
-    here’s a simple step-by-step of https://t.co/DFUV5McRjR
+    Here are the pros, cons and guidelines for using each.
+
+    [ bookmark 🔖 this post for later ]
+
+    💻 Non-Agentic AI
+    ↳ Simple https://t.co/60GOMT4P1B
   summary: ""
   lang: en
-  favorite_count: 78
-  conversation_count: 33
+  favorite_count: 10
+  conversation_count: 8
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:57.663Z
-- id: "2037077642625655077"
-  url: https://x.com/clawmindio/status/2037077642625655077
-  author: clawmindio
+  discoveredAt: 2026-03-31T11:34:32.046Z
+- id: "2031324447261557024"
+  url: https://x.com/femke_plantinga/status/2031324447261557024
+  author: femke_plantinga
   content: |-
-    What's the one automation pattern your AI agent can't live without?
+    𝗠𝗖𝗣 or 𝗔𝗴𝗲𝗻𝘁 𝗦𝗸𝗶𝗹𝗹𝘀? 
 
-    Drop it below 👇 or share it on ClawMind so other agents can learn from it too.
+    You're asking the wrong question.
 
-    https://t.co/NXolP5q9Hp
+    Short answer: they're not alternatives - they're solving different problems in the same ecosystem.
 
-    #ClawMind #AIagents #BuildInPublic #moltbook #openclaw #clawbot #clawdbot
+    If you're building with AI agents, you've probably heard about both the Model Context Protocol (MCP) and https://t.co/kkLKm1HzFq
   summary: ""
   lang: en
-  favorite_count: 5
-  conversation_count: 2
+  favorite_count: 705
+  conversation_count: 36
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-31T11:34:32.242Z
+- id: "2029534926828388537"
+  url: https://x.com/akshay_pachaar/status/2029534926828388537
+  author: akshay_pachaar
+  content: |-
+    MCP vs. Skills for AI agents, clearly explained!
+
+    People treat MCP and Skills like they're the same thing.
+
+    They're not.
+
+    Conflating them is one of the most common mistakes I see when people start building AI agents seriously.
+
+    So let's break both down from scratch.
+
+    Before MCP https://t.co/QVJm6RHM0b
+  summary: ""
+  lang: en
+  favorite_count: 1398
+  conversation_count: 108
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-31T11:34:32.410Z
+- id: "2036448259724423482"
+  url: https://x.com/jpschroeder/status/2036448259724423482
+  author: jpschroeder
+  content: |-
+    This is a much bigger deal than most people realize. If you don't know why, let me explain.
+
+    Agents perform "work" right now by calling "tools". These are just pieces of context shoved into the context window saying "if you think you the next thing you should do falls into one of
+  summary: ""
+  lang: en
+  favorite_count: 1987
+  conversation_count: 59
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-31T11:34:32.600Z
+- id: "2032829635537547681"
+  url: https://x.com/BharukaShraddha/status/2032829635537547681
+  author: BharukaShraddha
+  content: |-
+    Most people think MCP, RAG, and AI Agents compete with each other.
+
+    They don’t.
+
+    They solve different problems in the AI stack.
+
+    Here’s the simplest way to understand it 👇
+
+    🔌 MCP (Model Context Protocol)
+    MCP standardizes how LLMs use tools.
+
+    Instead of building custom https://t.co/RFpSIfNZ0v
+  summary: ""
+  lang: en
+  favorite_count: 301
+  conversation_count: 25
+  verified: true
+  note_tweet: true
+  searchQuery: ""
+  discoveredAt: 2026-03-31T11:34:32.781Z
+- id: "2038934550768673265"
+  url: https://x.com/patloeber/status/2038934550768673265
+  author: patloeber
+  content: |-
+    We shipped a Gemini Docs MCP🚢
+
+    Now you can set up your coding assistant with both MCP and Gemini Skills!
+
+    When building with the Gemini API, our internal tests yield 10X better results in coding outputs compared to not using them. Give it a try :) https://t.co/OqpZ4dapYI
+  summary: ""
+  lang: en
+  favorite_count: 28
+  conversation_count: 4
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:57.826Z
-- id: "2038525434137067576"
-  url: https://x.com/tonyGewrit/status/2038525434137067576
-  author: tonyGewrit
+  discoveredAt: 2026-03-31T11:34:32.942Z
+- id: "2038933517774770369"
+  url: https://x.com/superpowerdotio/status/2038933517774770369
+  author: superpowerdotio
   content: |-
-    memescope monday … but with AI agents deployed.
+    Model Context Protocol crossed 97M installs in March
 
-    @spawnagents locked on rn.
-  summary: ""
-  lang: en
-  favorite_count: 13
-  conversation_count: 2
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:57.988Z
-- id: "2038099404981481577"
-  url: https://x.com/Alacritic_Super/status/2038099404981481577
-  author: Alacritic_Super
-  content: |-
-    Most developers struggle to connect AI agents with tools.
+    AI providers now ships MCP-compatible tooling. Agent infra is the standard.
 
-    Every integration = custom code.
+    97M installs of orchestration tooling. 0 economic protocols for how agents earn. The plumbing is done.
 
-    That does not scale.
-
-    Meet mcp-use.
-
-    https://t.co/ZPnKYmklsZ
-
-    An open-source toolkit that makes it easy to interact with MCP (Model Context Protocol) servers using custom agents. 
-
-    Why it https://t.co/1pT2TiMRZ4
-  summary: ""
-  lang: en
-  favorite_count: 4
-  conversation_count: 3
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.154Z
-- id: "2038135018384437431"
-  url: https://x.com/swatx18/status/2038135018384437431
-  author: swatx18
-  content: |-
-    TL;DR on MCP:
-
-    ✅ Open standard (open-source by Anthropic)
-    ✅ Works with all major LLMs
-    ✅ Local or remote servers
-    ✅ Tool calling + data access + prompt templates
-    ✅ Backbone of the agentic web
-
-    Start → https://t.co/VtRJ5tkTwQ
-
-    Follow for more AI dev deep dives 🧵 (6/6)
-  summary: ""
-  lang: en
-  favorite_count: 1
-  conversation_count: 0
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.316Z
-- id: "2038533361002549558"
-  url: https://x.com/0xJigen/status/2038533361002549558
-  author: 0xJigen
-  content: |-
-    Everyone on L2 is competing with each other for volume these days.
-
-    Meanwhile @base is becoming the home for AI agents actually doing stuff onchain.
-
-    + x402 payments blowing up with machines paying machines with USDC
-    + Agent wallets now come with built-in compliance
-    + AI
-  summary: ""
-  lang: en
-  favorite_count: 60
-  conversation_count: 11
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.521Z
-- id: "2038529989008589141"
-  url: https://x.com/joezzyweb3/status/2038529989008589141
-  author: joezzyweb3
-  content: |-
-    THE FUTURE OF AI AGENTS
-
-    Space hosted by @pukerrainbrow himself 
-
-    With 4 other amazing guests but I'm highlighting @RishAhuja and one of the most fascinating part of what he said
-
-    "We have enough tools than in 2009, what we need is good quality data"
-
-    Timestamp 
-    0:06 - 0:32 ➠ https://t.co/zZ8ScA0opF
-  summary: ""
-  lang: en
-  favorite_count: 11
-  conversation_count: 9
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.685Z
-- id: "2034946111694131639"
-  url: https://x.com/techNmak/status/2034946111694131639
-  author: techNmak
-  content: |-
-    Learning AI engineering in 2026.
-
-    What most people do:
-    → Jump to agents
-    → Skip foundations
-    → Ignore MLOps
-    → Wonder why nothing works
-
-    What this roadmap shows:
-
-    1. Foundation (Python, APIs, clean code)
-    2. Semantic intelligence (embeddings, vector DBs)
-    3. RAG (grounded outputs) https://t.co/0IPorqIXae
-  summary: ""
-  lang: en
-  favorite_count: 601
-  conversation_count: 16
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.837Z
-- id: "2038523298481639932"
-  url: https://x.com/cangg_l/status/2038523298481639932
-  author: cangg_l
-  content: |-
-    From NVIDIA GTC to Quantum x AI: why I think @quipnetwork is a hidden gem pre-TGE
-
-    GTC 2026 ain’t about AI anymore, it’s how Jensen sees compute as an economy. Once tokens = compute output, AI feels like just surface, real game’s underneath.
-
-    Looking at AI agents like Bittensor, https://t.co/6WrVHkux4D
+    The economy hasn’t been built. Until now.
   summary: ""
   lang: en
   favorite_count: 29
-  conversation_count: 28
+  conversation_count: 4
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:58.997Z
-- id: "2038526818421006612"
-  url: https://x.com/BJauhi/status/2038526818421006612
-  author: BJauhi
+  discoveredAt: 2026-03-31T11:34:33.114Z
+- id: "2034774321537982635"
+  url: https://x.com/RhysSullivan/status/2034774321537982635
+  author: RhysSullivan
   content: |-
-    The bridge between AI Agents and Real-World Assets (RWA) is finally here 🔥
+    It's unfortunate that MCP actually solves pretty much all problems people have with agents today, it's just that all of the first implementations of it were bad so people discredit it now
 
-    Excited to see @SelanetAI partnering with @theSIXnetwork 
-
-    We’re talking about bringing massive liquidity from real estate &amp; commodities on-chain, powered by a decentralized AI execution layer.
-
-    This is https://t.co/X7JaLyBadO
+    The latest one is skill distribution, works so well for that
   summary: ""
   lang: en
-  favorite_count: 34
-  conversation_count: 32
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:59.198Z
-- id: "2037569595297476803"
-  url: https://x.com/dimzhuk/status/2037569595297476803
-  author: dimzhuk
-  content: |-
-    @aakashgupta built Agentfy on MCP then rebuilt without it
-
-    MCP looked clean in demos. in prod it ate context before the agent did anything useful.
-
-    switched to direct API calls. half the tokens, same output, easier to debug at 3am
-
-    the abstraction solved a problem the CLI never had
-  summary: ""
-  lang: en
-  favorite_count: 0
-  conversation_count: 0
+  favorite_count: 282
+  conversation_count: 38
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:59.395Z
-- id: "2036445681557082392"
-  url: https://x.com/arbitrum/status/2036445681557082392
-  author: arbitrum
+  discoveredAt: 2026-03-31T11:34:33.277Z
+- id: "2038939571854180838"
+  url: https://x.com/OnlyReaderX_/status/2038939571854180838
+  author: OnlyReaderX_
   content: |-
-    Agentic commerce has arrived on the Arbitrum Platform!
+    Good Evening fam 🌛
 
-    With @virtuals_io, AI agents can coordinate, transact, and operate as autonomous businesses powered by Arbitrum's low costs, deep liquidity and reliable execution.
+    Most AI agent developers focus on the model layer
+    specifically, choosing which LLMs, frameworks, or hints to use. 
 
-    Let’s scale the agentic economy together.
-  summary: ""
-  lang: en
-  favorite_count: 353
-  conversation_count: 44
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:59.583Z
-- id: "2034903406058319890"
-  url: https://x.com/clawmindio/status/2034903406058319890
-  author: clawmindio
-  content: |-
-    What's the weirdest problem your AI agent solved that you didn't expect it to?
+    However, few mention the underlying truth:
 
-    Drop your stories below 👇 We're collecting the best ones on ClawMind.
-
-    https://t.co/NXolP5q9Hp
-
-    #ClawMind #AIagents #BuildInPublic #moltbook #openclaw #clawbot #clawdbot
-  summary: ""
-  lang: en
-  favorite_count: 17
-  conversation_count: 16
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:59.750Z
-- id: "2038537322912731295"
-  url: https://x.com/savvyonchain/status/2038537322912731295
-  author: savvyonchain
-  content: |-
-    5 essential skills software engineers (vibe coders😂) Should Learn in 2026
-
-    ➤ System design + architecture for AI-powered applications
-
-    ➤ AI-augmented development &amp; prompt engineering
-
-    ➤ Building &amp; integrating AI agents + RAG systems
-
-    Details soon…
-  summary: ""
-  lang: en
-  favorite_count: 22
-  conversation_count: 21
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:31:59.986Z
-- id: "2035774898392518863"
-  url: https://x.com/RoundtableSpace/status/2035774898392518863
-  author: RoundtableSpace
-  content: |-
-    Chrome quietly shipped a feature that lets AI agents use a browser you're already logged into
-
-    - Skip CAPTCHA &amp; re-logins entirely
-    - Agents test with your own auth
-    - Works best with Chrome Dev Tool MCP
-
-    No more authentication headaches for browser agents
-
-    https://t.co/TczCuEt4uO
-  summary: ""
-  lang: en
-  favorite_count: 1111
-  conversation_count: 77
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:00.143Z
-- id: "2038197299147370707"
-  url: https://x.com/0xinfini/status/2038197299147370707
-  author: 0xinfini
-  content: |-
-    AI × Crypto is entering a new era.
-
-    We are hosting a special Founders’ Talk on:
-    2026 AI × Crypto Thesis: The Agent Economy
-    As AI agents evolve from content engines to economic actors, the next question is clear:
-    how will they earn, transact, and operate at scale?
-
-    Join us with an https://t.co/MU2so2eij5
-  summary: ""
-  lang: en
-  favorite_count: 36
-  conversation_count: 11
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:00.302Z
-- id: "2037175372307943805"
-  url: https://x.com/agentcommunity_/status/2037175372307943805
-  author: agentcommunity_
-  content: |-
-    @openclaw @NVIDIAAIDev @rohanpaul_ai The industry is pivoting from instruction-heavy prompts to "toolbox" architectures using the Model Context Protocol (MCP). Developers are replacing stale context with dynamic Python scripts and Figma integrations.
-    @bcherny
-  summary: ""
-  lang: en
-  favorite_count: 1
-  conversation_count: 2
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:00.526Z
-- id: "2038432270655410624"
-  url: https://x.com/RoundtableSpace/status/2038432270655410624
-  author: RoundtableSpace
-  content: |-
-    THE LARGEST DATABASE FOR AI AGENTS IS ABOUT TO GET OPEN SOURCED.
-
-    47,000 verified agent actions, 250+ apps, and one connection that can plug into almost any workflow.
-
-    https://t.co/ttQuZ10GYZ
-  summary: ""
-  lang: en
-  favorite_count: 228
-  conversation_count: 36
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:00.682Z
-- id: "2038439820427731346"
-  url: https://x.com/RoundtableSpace/status/2038439820427731346
-  author: RoundtableSpace
-  content: |-
-    AI AGENTS CAN NOW CREATE AND ANIMATE SPRITES FOR YOUR VIBE CODED GAME.
-
-    Connect an MCP capable agent, tell it what to make, and it can generate, inspect, and regenerate assets until they’re right.
-
-    https://t.co/oF8wLTDawq
-  summary: ""
-  lang: en
-  favorite_count: 188
-  conversation_count: 21
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:00.843Z
-- id: "2038521650829013122"
-  url: https://x.com/TabiVibe/status/2038521650829013122
-  author: TabiVibe
-  content: |-
-    AI agents are becoming economic actors.
-    The rails will matter.
-
-    See you there. 👇
-    https://t.co/vaIglSwCe3
-  summary: ""
-  lang: en
-  favorite_count: 32
-  conversation_count: 17
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.052Z
-- id: "2036517448112021863"
-  url: https://x.com/splinetool/status/2036517448112021863
-  author: splinetool
-  content: |-
-    Today, we're releasing Omma.
-
-    Create 3D, Websites, and Apps with AI agents.
-
-    Start now on https://t.co/Q6aAIWZYyJ
-    Follow @omma_ai https://t.co/i8O4XYvBPo
-  summary: ""
-  lang: en
-  favorite_count: 4150
-  conversation_count: 178
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.213Z
-- id: "2036321520222654508"
-  url: https://x.com/cryptofundix/status/2036321520222654508
-  author: cryptofundix
-  content: |-
-    Built something new a Canva-like tool for QR-based NFTs.
-
-    Create identity, AI agent &amp; asset NFTs that actually do something when scanned.
-
-    No login. No backend. Fully local.
-
-    Would love feedback from Web3 builders 👇  
-    https://t.co/35AidjzOtE  
-
-    #buildinpublic https://t.co/t92rrPnXrv
+    AI agents still lack access to most internet resources. Without APIs, they have neither internet https://t.co/ya871wxLPd
   summary: ""
   lang: en
   favorite_count: 8
-  conversation_count: 1
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.381Z
-- id: "2035171720945115469"
-  url: https://x.com/levie/status/2035171720945115469
-  author: levie
-  content: |-
-    It is quite ridiculous how agile you have to be with your AI agent stack right now. Whatever you spent 6 months perfecting 12 months ago probably is already out of date and you’re better off doing a reset than trying to resuscitate it architecturally.
-
-    And what’s interesting is
-  summary: ""
-  lang: en
-  favorite_count: 458
-  conversation_count: 63
+  conversation_count: 8
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.568Z
-- id: "2038481345349869908"
-  url: https://x.com/SelanetAI/status/2038481345349869908
-  author: SelanetAI
+  discoveredAt: 2026-03-31T11:34:33.444Z
+- id: "2038939198485381566"
+  url: https://x.com/carlosmarcialt/status/2038939198485381566
+  author: carlosmarcialt
   content: |-
-    Selanet is partnering with @theSIXnetwork.
+    Work402 now integrates directly with ACP and https://t.co/B3v04fxDuU.
 
-    SIX Network builds infrastructure for real-world asset (RWA) tokenization, enabling businesses to digitize assets like real estate and commodities on-chain with transparency and security.
+    This is a big step forward in how AI agents get distributed, hired, and validated.
 
-    This partnership brings Selanet’s AI agent https://t.co/8gyyaKKMlL
-  summary: ""
-  lang: en
-  favorite_count: 27
-  conversation_count: 13
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.732Z
-- id: "2038258626641719740"
-  url: https://x.com/RoundtableSpace/status/2038258626641719740
-  author: RoundtableSpace
-  content: |-
-    Someone just open-sourced the world's largest integration database for AI agents.
-
-    - 47,000 agentic actions across 250+ apps
-    - Connect to Slack, GitHub, Gmail, Stripe, Discord, Google Sheets and more
-    - Every action is verified your agent never hallucinates API knowledge again
-    - https://t.co/8xpMfcF4Gm
-  summary: ""
-  lang: en
-  favorite_count: 809
-  conversation_count: 88
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:01.896Z
-- id: "2038538335157666225"
-  url: https://x.com/TimHaldorsson/status/2038538335157666225
-  author: TimHaldorsson
-  content: |-
-    Espressio AI is making waves already
-
-    I am planning a rollout series of articles that will be published on various marketing/SaaS and fintech websites. 
-
-    here we had an initial one focused on AI agents for marketing. 
-
-    @EspressioAI is going to change the way marketing works with https://t.co/DQPLD9izGt
-  summary: ""
-  lang: en
-  favorite_count: 15
-  conversation_count: 7
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.062Z
-- id: "2036435490988236857"
-  url: https://x.com/virtuals_io/status/2036435490988236857
-  author: virtuals_io
-  content: |-
-    Virtuals is powering agent commerce on Arbitrum
-
-    One of the most liquid ecosystems in DeFi. Virtuals is building the commerce layer for agents to transact natively on @arbitrum https://t.co/QHxef8e9at
-  summary: ""
-  lang: en
-  favorite_count: 367
-  conversation_count: 50
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.219Z
-- id: "2035352690234966429"
-  url: https://x.com/devajibola/status/2035352690234966429
-  author: devajibola
-  content: |-
-    an AI agent has a wallet address now. two actually — owner and validator, both live on Arc Testnet
-    ERC-8004 means agents can build financial reputation that carries across apps. no more trust resets
-    AgentVault is becoming real 🔥 @arc_network @circle
-    #BuildInPublic #Web3 #Arc https://t.co/sQIt00Ugb7
+    Agents can onboard once through Work402, get mirrored into ACP/aGDP.io, and carry their identity, catalog, pricing, and https://t.co/btq6GsudbI
   summary: ""
   lang: en
   favorite_count: 6
@@ -522,211 +190,19 @@
   verified: true
   note_tweet: true
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.387Z
-- id: "2034720552909496757"
-  url: https://x.com/ZachWitkoff/status/2034720552909496757
-  author: ZachWitkoff
+  discoveredAt: 2026-03-31T11:34:33.615Z
+- id: "2032117737019887890"
+  url: https://x.com/commondotxyz/status/2032117737019887890
+  author: commondotxyz
   content: |-
-    Agents are starting to execute, not just assist.
+    Common → from Agents to DAOs. And we’re just getting started.
 
-    But they can’t truly act without native money.
-
-    USD1 is that missing layer — programmable, permissioned, and designed for a world where software moves capital as easily as it moves data.
-
-    We’re kicking that off today with
+    Crypto UX is buried and AI agents lack context. MCP changes that, tools &amp; agents become first-class in chat. Coordination isn’t limited by headcount, it’s limited by context. https://t.co/H8JKg8WhW1
   summary: ""
   lang: en
-  favorite_count: 203
-  conversation_count: 56
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.582Z
-- id: "2035129780321050735"
-  url: https://x.com/Shruti_0810/status/2035129780321050735
-  author: Shruti_0810
-  content: |-
-    You are a genius if you know all of this. If not, tutorials are included!
-
-    AI Agents – https://t.co/wjB9TNw8Wd
-
-    Context – https://t.co/G8KPLwk0h1
-
-    MCP – https://t.co/c2GbkUtSET
-
-    Claude Code – https://t.co/gOrcZP9us4
-
-    APIs – https://t.co/vblIPAMiAx
-
-    Cursor –
-  summary: ""
-  lang: en
-  favorite_count: 577
-  conversation_count: 2
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.760Z
-- id: "2038528996061671474"
-  url: https://x.com/RSV281083/status/2038528996061671474
-  author: RSV281083
-  content: Noise isn’t just another feed. They’re building the UX that finally feels native for traders while still giving normal people the kind of insights you usually only get if you’re glued to the timeline 24/7. This week they’re even using Notion AI agents internally to cut the boring https://t.co/S8F7oxkiGD
-  summary: ""
-  lang: en
-  favorite_count: 11
-  conversation_count: 5
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:02.920Z
-- id: "2038470019483410869"
-  url: https://x.com/RoundtableSpace/status/2038470019483410869
-  author: RoundtableSpace
-  content: |-
-    CORE(.)SO IS REBUILDING THE MODERN WORKSPACE AROUND AI AGENTS.
-
-    It takes the best parts of tools like Slack, Linear, and Notion, then recenters everything around shared context and agent powered work.
-
-    https://t.co/HtYTEn45KO
-  summary: ""
-  lang: en
-  favorite_count: 58
-  conversation_count: 7
+  favorite_count: 259
+  conversation_count: 12
   verified: true
   note_tweet: false
   searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.082Z
-- id: "2035718145692819590"
-  url: https://x.com/RoundtableSpace/status/2035718145692819590
-  author: RoundtableSpace
-  content: |-
-    Someone built a model-free document parser for AI agents.
-
-    - No GPU required, processes 500 pages in 2s
-    - Accurate than PyPDF, PyMuPDF &amp; Markdown
-    - Supports 50+ file formats
-    - Plug &amp; play with any agent
-
-    Open-source and completely free.
-
-    https://t.co/8OHyKJNu4i
-  summary: ""
-  lang: en
-  favorite_count: 838
-  conversation_count: 43
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.247Z
-- id: "2037260480562229557"
-  url: https://x.com/base/status/2037260480562229557
-  author: base
-  content: |-
-    Ever been curious as to how we make our assets?
-
-    Our @Creative0ffice built a custom platform (using the latest agentic coding tools of course) that allows anybody on the team to generate them! https://t.co/xWUnFzqgbz
-  summary: ""
-  lang: en
-  favorite_count: 360
-  conversation_count: 48
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.439Z
-- id: "2035019947911651372"
-  url: https://x.com/akagg07/status/2035019947911651372
-  author: akagg07
-  content: |-
-    We built an autonomous AI agent that reads SEC filings so you don’t have to Meet AFI.
-    7 TinyFish agents, crisis detection, contradiction flags, news sentiment tracking, insider &amp; congressional trade monitoring, live alerts.
-
-    @Tiny_Fish #TinyFishAccelerator #BuildInPublic https://t.co/2bNQOcWjHG
-  summary: ""
-  lang: en
-  favorite_count: 8
-  conversation_count: 2
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.603Z
-- id: "2036434766661296602"
-  url: https://x.com/figma/status/2036434766661296602
-  author: figma
-  content: Now you can use AI agents to design directly on the Figma canvas, with our new use_figma MCP tool and skills to teach them. Open beta starts today. https://t.co/AQZsFWvvXQ
-  summary: ""
-  lang: en
-  favorite_count: 10120
-  conversation_count: 484
-  verified: true
-  note_tweet: false
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.766Z
-- id: "2036477814656876966"
-  url: https://x.com/teneo_protocol/status/2036477814656876966
-  author: teneo_protocol
-  content: |-
-    Agents were once limited to calling APIs.
-    Now agents participate in the economy.
-
-    The missing element for autonomous agents was always payments.
-
-    Now agents transact natively on the internet using x402, enabling autonomous payments between agents and services.
-
-    Agent Stack:
-    🦞 https://t.co/dC83w7gw4A
-  summary: ""
-  lang: en
-  favorite_count: 885
-  conversation_count: 129
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:03.931Z
-- id: "2037805497214980111"
-  url: https://x.com/__tosh/status/2037805497214980111
-  author: __tosh
-  content: |-
-    @arvidkahl it's more about the agent user than the human user
-
-    llm+agent combo is good at composing command line tools
-
-    tool1 | tool 2 | tool 3 =&gt; result
-
-    that is extremely token efficient compared to when the agent has to use mcp to call each tool
-
-    i'm sure there is a way to adapt mcp to
-  summary: ""
-  lang: en
-  favorite_count: 2
-  conversation_count: 0
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:04.108Z
-- id: "2035699524295909652"
-  url: https://x.com/Aurimas_Gr/status/2035699524295909652
-  author: Aurimas_Gr
-  content: |-
-    My latest newsletter episode on 𝗦𝘁𝗮𝘁𝗲 𝗼𝗳 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗶𝗻 𝟮𝟬𝟮𝟲 is out.
-
-    Most agent failures come from poor context, not weak models. Eight months after the Manus and Anthropic posts that put context engineering on the map, the patterns have https://t.co/Gsu6rWKcNY
-  summary: ""
-  lang: en
-  favorite_count: 300
-  conversation_count: 17
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:04.272Z
-- id: "2035173492447224237"
-  url: https://x.com/karpathy/status/2035173492447224237
-  author: karpathy
-  content: "@RhysSullivan I'm not very happy with the code quality and I think agents bloat abstractions, have poor code aesthetics, are very prone to copy pasting code blocks and it's a mess, but at this point I stopped fighting it too hard and just moved on. The agents do not listen to my instructions"
-  summary: ""
-  lang: en
-  favorite_count: 4311
-  conversation_count: 250
-  verified: true
-  note_tweet: true
-  searchQuery: ""
-  discoveredAt: 2026-03-30T09:32:04.446Z
+  discoveredAt: 2026-03-31T11:34:33.777Z
