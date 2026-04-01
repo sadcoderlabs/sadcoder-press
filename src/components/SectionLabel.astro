@@ -1,0 +1,15 @@
+---
+interface Props {
+  label: string;
+  color?: 'primary' | 'accent';
+}
+
+const { label, color = 'primary' } = Astro.props;
+const lineColor = color === 'primary' ? 'var(--brand-primary)' : 'var(--brand-accent-text)';
+const textColor = color === 'primary' ? 'var(--brand-primary-text)' : 'var(--brand-accent-text)';
+---
+
+<div class="flex items-center gap-2.5 mb-5">
+  <div class="h-px w-5" style={`background: ${lineColor}; opacity: 0.4;`}></div>
+  <span class="text-[11px] uppercase tracking-[2px] font-semibold" style={`color: ${textColor};`}>{label}</span>
+</div>

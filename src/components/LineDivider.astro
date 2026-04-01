@@ -1,0 +1,25 @@
+---
+interface Props {
+  variant?: 'primary' | 'accent';
+}
+
+const { variant = 'primary' } = Astro.props;
+
+const isPrimary = variant === 'primary';
+---
+
+<div class="flex items-center gap-3 my-8">
+  {isPrimary ? (
+    <>
+      <div class="h-0.5 flex-1 rounded" style="background: var(--brand-primary); opacity: 0.15;"></div>
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--brand-primary); opacity: 0.3;"></div>
+      <div class="h-0.5 w-10 rounded" style="background: var(--brand-accent); opacity: 0.3;"></div>
+    </>
+  ) : (
+    <>
+      <div class="h-0.5 w-10 rounded" style="background: var(--brand-accent); opacity: 0.3;"></div>
+      <div class="w-1.5 h-1.5 rounded-full" style="background: var(--brand-accent); opacity: 0.3;"></div>
+      <div class="h-0.5 flex-1 rounded" style="background: var(--brand-accent); opacity: 0.1;"></div>
+    </>
+  )}
+</div>

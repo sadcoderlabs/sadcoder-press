@@ -1,0 +1,18 @@
+---
+interface Props {
+  lang: 'en' | 'zh';
+}
+
+const { lang } = Astro.props;
+---
+
+<footer class="max-w-4xl mx-auto px-6 pb-8">
+  <div class="h-px mb-5" style="background: var(--border-main);"></div>
+  <div class="flex justify-between items-center">
+    <span class="text-xs" style="color: var(--text-muted);">© 2026 sadcoderlabs</span>
+    <div class="flex gap-4">
+      <a href="https://github.com/sadcoderlabs" target="_blank" rel="noopener noreferrer" class="text-xs transition-colors" style="color: var(--text-muted);">GitHub</a>
+      <a href="https://x.com/sadcoderlabs" target="_blank" rel="noopener noreferrer" class="text-xs transition-colors" style="color: var(--text-muted);">Twitter</a>
+    </div>
+  </div>
+</footer>
