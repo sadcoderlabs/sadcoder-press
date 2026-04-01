@@ -1,4 +1,77 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Color tokens — swap on .dark */
+:root {
+  --bg-page: #FDFAFF;
+  --bg-card: #FFFFFF;
+  --bg-card-inner: #F5F3FF;
+  --text-primary: #2E1065;
+  --text-body: #374151;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --brand-primary: #7C3AED;
+  --brand-primary-text: #6D28D9;
+  --brand-accent: #FBBF24;
+  --brand-accent-text: #D97706;
+  --border-main: #EDE9FE;
+  --border-subtle: #F3F0FF;
+  --tag-bg: #F5F3FF;
+  --tag-text: #6D28D9;
+}
+
+.dark {
+  --bg-page: #110D1B;
+  --bg-card: #1C1529;
+  --bg-card-inner: #3B1F6E;
+  --text-primary: #EDE9FE;
+  --text-body: #D1D5DB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --brand-primary: #7C3AED;
+  --brand-primary-text: #A78BFA;
+  --brand-accent: #FBBF24;
+  --brand-accent-text: #FBBF24;
+  --border-main: #2D2545;
+  --border-subtle: #2D2545;
+  --tag-bg: #3B1F6E;
+  --tag-text: #DDD6FE;
+}
+
+/* Typography overrides for prose */
+.prose {
+  --tw-prose-links: var(--brand-primary-text);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-body: var(--text-body);
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  text-underline-offset: 2px;
+}
+
+.prose :where(code):not(:where(pre code, [class~="not-prose"] *)) {
+  background: var(--bg-card-inner);
+  color: var(--brand-primary-text);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.prose :where(code):not(:where(pre code, [class~="not-prose"] *))::before,
+.prose :where(code):not(:where(pre code, [class~="not-prose"] *))::after {
+  content: none;
+}
+
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
+  background: #1C1529;
+  border-radius: 8px;
+}
+
+/* Card hover */
+.card-hover:hover {
+  border-color: var(--brand-primary) !important;
+}

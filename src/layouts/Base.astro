@@ -7,11 +7,13 @@ interface Props {
   lang: 'en' | 'zh';
   description?: string;
   image?: string;
+  narrow?: boolean;
 }
 
-const { title, lang, description, image } = Astro.props;
+const { title, lang, description, image, narrow = false } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
+const maxWidth = narrow ? 'max-w-[680px]' : 'max-w-4xl';
 ---
 
 <!doctype html>
@@ -41,9 +43,9 @@ const ogImage = image ? new URL(image, Astro.site).href : undefined;
       document.documentElement.classList.toggle('dark', theme === 'dark');
     </script>
   </head>
-  <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen transition-colors">
+  <body class="min-h-screen transition-colors" style="background: var(--bg-page); color: var(--text-body); font-family: 'Inter', system-ui, sans-serif;">
     <Nav lang={lang} />
-    <main class="max-w-3xl mx-auto px-4 pb-16">
+    <main class={`${maxWidth} mx-auto px-6 pb-16`}>
       <slot />
     </main>
   </body>
