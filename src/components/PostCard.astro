@@ -1,0 +1,61 @@
+---
+import type { PostType } from '../lib/posts';
+import { postTypeColors, postTypeLabels, platformColors } from '../lib/posts';
+
+interface Props {
+  type: PostType;
+  platforms: string[];
+  content: string;
+  date: string;
+  href: string;
+  replyAuthor?: string;
+  threadTitle?: string;
+  threadCount?: number;
+  lang: 'en' | 'zh';
+}
+
+const { type, platforms, content, date, href, replyAuthor, threadTitle, threadCount, lang } = Astro.props;
+const colors = postTypeColors[type];
+const typeLabel = postTypeLabels[type][lang];
+---
+
+<a href={href} class="block rounded-xl p-4 border transition-colors no-underline relative overflow-hidden card-hover" style={`background: var(--bg-card); border-color: var(--border-main);`}>
+  <!-- Top color bar -->
+  <div class="absolute top-0 left-0 w-full h-[3px]" style={`background: ${colors.bar};`}></div>
+
+  <!-- Badges -->
+  <div class="flex items-center gap-1.5 mb-2.5 mt-1">
+    <span class="text-[10px] px-2 py-px rounded-full" style={`background: ${colors.badgeBg}; color: ${colors.badgeText};`}>{typeLabel}</span>
+    {platforms.map((p) => {
+      const pc = platformColors[p] || platformColors.twitter;
+      const label = p === 'twitter' ? '𝕏' : p;
+      return (
+        <>
+          <span class="text-[10px] px-2 py-px rounded-full dark:hidden" style={`background: ${pc.bg}; color: ${pc.text};`}>{label}</span>
+          <span class="text-[10px] px-2 py-px rounded-full hidden dark:inline" style={`background: ${pc.darkBg}; color: ${pc.darkText};`}>{label}</span>
+        </>
+      );
+    })}
+  </div>
+
+  <!-- Reply target -->
+  {type === 'reply' && replyAuthor && (
+    <div class="text-[11px] font-medium mb-1.5" style="color: var(--brand-primary-text);">@{replyAuthor}</div>
+  )}
+
+  <!-- Thread title -->
+  {type === 'thread' && threadTitle && (
+    <div class="text-sm font-semibold leading-snug mb-1.5" style="color: var(--text-primary);">{threadTitle}</div>
+  )}
+
+  <!-- Content preview -->
+  <div class="text-[13px] leading-relaxed line-clamp-3" style="color: var(--text-body);">{content}</div>
+
+  <!-- Footer -->
+  <div class="mt-2.5 pt-2 border-t flex justify-between items-center" style="border-color: var(--border-subtle);">
+    <span class="text-[11px]" style="color: var(--text-muted);">{date}</span>
+    {type === 'thread' && threadCount && (
+      <span class="text-[11px]" style="color: var(--brand-primary-text);">{threadCount} posts</span>
+    )}
+  </div>
+</a>
