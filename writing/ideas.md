@@ -26,3 +26,5 @@
 - **Agent 基礎建設：當服務不再為人類而設計** (2026-03-20) @shao → [articles/2026-03-20_agent-infrastructure](articles/2026-03-20_agent-infrastructure/)
 
 - **用遊戲類比思考多人 Agent 的可能性** (2026-03-20) @shao → [articles/2026-03-20_vibe-coding-as-game](articles/2026-03-20_vibe-coding-as-game/)
+
+- **Claude Code 外洩碼中的記憶架構：它怎麼整理記憶，我們又怎麼做** (2026-04-01) @yurenju → [articles/2026-04-01_claude-code-memory-architecture](articles/2026-04-01_claude-code-memory-architecture/)
