@@ -4,12 +4,15 @@
 - Title: 從 Claude Code 外洩重新思考 AI Agent 的記憶整理
 - Author: yurenju
 - Date: 2026-04-01
-- Status: review  <!-- draft | ready | writing | review | published -->
+- Status: published  <!-- draft | ready | writing | review | published -->
 - Original language: zh
 - Translations: en
 
 ## Publishing
-<!-- Managed by publishing tools. Leave empty during writing. -->
+- Target: astro (sadcoder-press)
+- Published to: src/content/blog/2026-04-01_rethink-agent-memory/
+- Published at: 2026-04-01
+- Slug: rethink-agent-memory
 
 ## Target Audience
 - Who: 對 AI agent 記憶管理有興趣的開發者——因為記憶品質直接影響 agent 的工作品質，好的記憶讓 agent 能推斷更多意圖，不用每次都從頭講完整的上下文
