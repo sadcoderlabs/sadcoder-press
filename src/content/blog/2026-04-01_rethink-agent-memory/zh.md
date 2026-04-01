@@ -1,5 +1,5 @@
 ---
-title: "從 Claude Code 外洩重新思考 AI Agent 的記憶整理"
+title: "從外洩的 Claude Code 原始碼看 AI Agent 的記憶整理"
 date: 2026-04-01
 description: "理解 Claude Code 和 sadcoder（OpenClaw）各自怎麼整理 AI agent 的記憶——從業界最前沿的設計到實戰中的做法，讀者會帶走可應用的記憶管理模式"
 tags: [ai, agent, memory, claude-code, openclaw]
@@ -7,7 +7,7 @@ image: ./assets/cover.jpg
 lang: zh
 ---
 
-![從 Claude Code 外洩重新思考 AI Agent 的記憶整理](./assets/cover.jpg)
+![從外洩的 Claude Code 原始碼看 AI Agent 的記憶整理](./assets/cover.jpg)
 
 3 月 31 日，Claude Code 的原始碼因為 npm 打包錯誤意外外洩。[512,000 行 TypeScript，1,906 個檔案](https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know)，社群幾個小時內就把整個架構翻了一遍。多數人在討論 undercover mode 和 frustration regex，但有一個詞抓住了我的注意力：**autoDream**。
 

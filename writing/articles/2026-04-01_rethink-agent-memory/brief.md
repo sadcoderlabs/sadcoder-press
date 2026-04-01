@@ -1,7 +1,7 @@
 # Writing Brief
 
 ## Article Info
-- Title: 從 Claude Code 外洩重新思考 AI Agent 的記憶整理
+- Title: 從外洩的 Claude Code 原始碼看 AI Agent 的記憶整理
 - Author: yurenju
 - Date: 2026-04-01
 - Status: published  <!-- draft | ready | writing | review | published -->

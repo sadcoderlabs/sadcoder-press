@@ -1,5 +1,5 @@
 ---
-title: "Rethinking AI Agent Memory After the Claude Code Leak"
+title: "What the Claude Code Leak Reveals About AI Agent Memory"
 date: 2026-04-01
 description: "How Claude Code and OpenClaw each organize AI agent memory — from cutting-edge design to hands-on practice, with applicable memory management patterns you can take away"
 tags: [ai, agent, memory, claude-code, openclaw]
@@ -7,7 +7,7 @@ image: ./assets/cover.jpg
 lang: en
 ---
 
-![Rethinking AI Agent Memory After the Claude Code Leak](./assets/cover.jpg)
+![What the Claude Code Leak Reveals About AI Agent Memory](./assets/cover.jpg)
 
 On March 31, Claude Code's source code was accidentally leaked due to an npm packaging error. [512,000 lines of TypeScript across 1,906 files](https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know), and the community had the entire architecture picked apart within hours. Most people were talking about undercover mode and frustration regex, but one word caught my attention: **autoDream**.
 

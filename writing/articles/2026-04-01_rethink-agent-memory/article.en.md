@@ -1,4 +1,4 @@
-# Rethinking AI Agent Memory After the Claude Code Leak
+# What the Claude Code Leak Reveals About AI Agent Memory
 
 On March 31, Claude Code's source code was accidentally leaked due to an npm packaging error. [512,000 lines of TypeScript across 1,906 files](https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know), and the community had the entire architecture picked apart within hours. Most people were talking about undercover mode and frustration regex, but one word caught my attention: **autoDream**.
 

@@ -27,4 +27,4 @@
 
 - **用遊戲類比思考多人 Agent 的可能性** (2026-03-20) @shao → [articles/2026-03-20_vibe-coding-as-game](articles/2026-03-20_vibe-coding-as-game/)
 
-- **從 Claude Code 外洩重新思考 AI Agent 的記憶整理** (2026-04-01) @yurenju → [articles/2026-04-01_rethink-agent-memory](articles/2026-04-01_rethink-agent-memory/)
+- **從外洩的 Claude Code 原始碼看 AI Agent 的記憶整理** (2026-04-01) @yurenju → [articles/2026-04-01_rethink-agent-memory](articles/2026-04-01_rethink-agent-memory/)
