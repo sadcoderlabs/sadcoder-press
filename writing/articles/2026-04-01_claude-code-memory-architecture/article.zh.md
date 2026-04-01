@@ -12,15 +12,15 @@ Claude Code 的記憶分三層。
 
 第二層是 topic files。`debugging.md`、`api-conventions.md` 這些獨立的 markdown 檔案，各自聚焦一個領域的知識。它們不在啟動時載入。當 Claude 需要某個領域的記憶時，[系統會用 Sonnet 模型從清單中選出最相關的幾個檔案](https://sathwick.xyz/blog/claude-code.html)再讀進來。
 
-第三層是原始對話記錄。每個 session 的 JSONL transcript 存在本地，但系統從不把它們完整讀回 context。需要的時候只做窄範圍的 grep，[系統提示寫著：「只找你懷疑重要的東西」](https://github.com/Piebald-AI/claude-code-system-prompts/blob/main/system-prompts/agent-prompt-dream-memory-consolidation.md)。200 行的硬上限、按需載入、grep-only 的原始資料——每一層都在省 token，因為 [context window 超過約 150K tokens 後，回答品質就會開始下降](https://discuss.huggingface.co/t/claude-code-source-leak-production-ai-architecture-patterns-from-512-000-lines/174846)。
+第三層是原始對話記錄。每個 session 的 JSONL transcript 存在本地，但系統從不把它們完整讀回 context。需要的時候只做窄範圍的 grep，[系統提示寫著：「只找你懷疑重要的東西」](https://github.com/Piebald-AI/claude-code-system-prompts/blob/main/system-prompts/agent-prompt-dream-memory-consolidation.md)。200 行的硬上限、按需載入、grep-only 的原始資料——每一層都在省 token，因為 [context window 使用量過高時，回答品質就會開始下降](https://www.sitepoint.com/claude-code-context-management/)。
 
 但光是存記憶還不夠，記憶會腐爛。autoDream 就是來處理這件事的。
 
-Anthropic 把這個機制叫做「做夢」，靈感來自人類 REM 睡眠期間的記憶整合。autoDream [以 forked subagent 的方式在背景執行](https://claudefa.st/blog/guide/mechanics/auto-dream)，做四件事：先掃描現有記憶狀態，建立心智地圖；接著收集新訊號，特別留意「漂移記憶」，就是跟目前程式碼已經對不上的舊事實；然後做整合，刪除被推翻的事實、合併來自多個 session 的重疊條目、把「昨天」轉成「2026-03-30」；最後修剪 MEMORY.md 索引，確保它維持在 200 行以內。
+Anthropic 把這個機制叫做「做夢」，靈感來自人類 REM 睡眠期間的記憶整合。autoDream [以 forked subagent 的方式在背景執行](https://sathwick.xyz/blog/claude-code.html)，做四件事：先掃描現有記憶狀態，建立心智地圖；接著收集新訊號，特別留意「漂移記憶」，就是跟目前程式碼已經對不上的舊事實；然後做整合，刪除被推翻的事實、合併來自多個 session 的重疊條目、把「昨天」轉成「2026-03-30」；最後修剪 MEMORY.md 索引，確保它維持在 200 行以內。
 
 這整套機制裡有一個設計讓我特別在意：**記憶視為提示**。Claude Code 的 agent 被要求在行動前，先對照實際程式碼驗證自己的記憶，不盲信上次記下的東西。這是一種內建的反思。
 
-目前主流的 AI coding tool 裡，[只有 Claude Code 內建了記憶整理機制](https://dev.to/pockit_tools/cursor-vs-windsurf-vs-claude-code-in-2026-the-honest-comparison-after-using-all-three-3gof)。Cursor 的 Memory Bank 是社群方案，Windsurf 有自動記憶但沒有整理流程。大家都在存記憶，Claude Code 多做了一步：整理它。
+目前主流的 AI coding tool 裡，[只有 Claude Code 內建了記憶整理機制](https://claudefa.st/blog/guide/mechanics/auto-dream)。Cursor 的 Memory Bank 是社群方案，Windsurf 有自動記憶但沒有整理流程。大家都在存記憶，Claude Code 多做了一步：整理它。
 
 ## 我們怎麼做
 
