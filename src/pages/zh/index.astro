@@ -1,7 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection, render } from 'astro:content';
-import { getSlug } from '../../lib/utils';
+import Hero from '../../components/Hero.astro';
+import LineDivider from '../../components/LineDivider.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+import { getSlug, formatDate } from '../../lib/utils';
+import { getPostType, getThreadCount } from '../../lib/posts';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const lang = 'zh';
 
@@ -13,52 +21,55 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
 
-const renderedSocial = await Promise.all(socialPosts.map(async (post) => {
-  const { Content } = await render(post);
-  return { post, Content };
-}));
+const socialPostsWithType = socialPosts.map((post) => {
+  const filePath = path.join('src/content/posts', post.id + '.md');
+  const rawContent = fs.readFileSync(filePath, 'utf-8');
+  const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+  const type = getPostType(post, body);
+  const threadCount = type === 'thread' ? getThreadCount(body) : undefined;
+  const firstLine = body.split(/\n---\n/)[0].trim();
+  return { post, type, threadCount, firstLine };
+});
 ---
 
-<Base title="首頁" lang={lang}>
-  <h1 class="text-3xl font-bold mt-8 mb-6">歡迎</h1>
-
-  <section class="mb-12">
-    <h2 class="text-xl font-semibold mb-4">最新文章</h2>
-    {blogPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">尚無文章。</p>}
-    <ul class="space-y-3">
-      {blogPosts.map((post) => (
-        <li>
-          <a href={`/zh/blog/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
-          <span class="text-sm text-gray-500 dark:text-gray-400 ml-2">{post.data.date.toLocaleDateString('zh-TW')}</span>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">{post.data.description}</p>
-        </li>
-      ))}
-    </ul>
-  </section>
+<Base title="sadcoder.press" lang={lang}>
+  <Hero lang={lang} />
+  <LineDivider variant="primary" />
 
   <section>
-    <h2 class="text-xl font-semibold mb-4">最新動態</h2>
-    {socialPosts.length === 0 && <p class="text-gray-500 dark:text-gray-400">尚無動態。</p>}
-    <div class="space-y-6">
-      {renderedSocial.map(({ post, Content }) => (
-        <article class="border-b dark:border-gray-700 pb-6">
-          <div class="flex items-center gap-2 mb-2">
-            <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-sm text-gray-500 dark:text-gray-400 hover:underline">
-              {post.data.date.toLocaleDateString('zh-TW')}
-            </a>
-            {post.data.platform.map((p) => (
-              <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{p}</span>
-            ))}
-          </div>
-          {post.data.title && (
-            <h3 class="text-lg font-bold mb-1">
-              <a href={`/zh/posts/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
-            </h3>
-          )}
-          <div class="prose dark:prose-invert max-w-none text-sm">
-            <Content />
-          </div>
-        </article>
+    <SectionLabel label="最新文章" color="primary" />
+    {blogPosts.length === 0 && <p style="color: var(--text-muted);">尚無文章。</p>}
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {blogPosts.map((post) => (
+        <ArticleCard
+          title={post.data.title}
+          description={post.data.description}
+          date={formatDate(post.data.date, lang)}
+          tags={post.data.tags}
+          href={`/zh/blog/${getSlug(post.id)}/`}
+        />
+      ))}
+    </div>
+  </section>
+
+  <LineDivider variant="accent" />
+
+  <section>
+    <SectionLabel label="最新動態" color="accent" />
+    {socialPosts.length === 0 && <p style="color: var(--text-muted);">尚無動態。</p>}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {socialPostsWithType.map(({ post, type, threadCount, firstLine }) => (
+        <PostCard
+          type={type}
+          platforms={post.data.platform}
+          content={firstLine}
+          date={formatDate(post.data.date, lang)}
+          href={`/zh/posts/${getSlug(post.id)}/`}
+          replyAuthor={post.data.replyTo?.author}
+          threadTitle={post.data.title}
+          threadCount={threadCount}
+          lang={lang}
+        />
       ))}
     </div>
   </section>
