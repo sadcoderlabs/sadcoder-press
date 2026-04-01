@@ -20,7 +20,7 @@ const pageTitle = post.data.title || `動態 — ${formatDate(post.data.date, 'z
 
 const filePath = path.join('src/content/posts', post.id + '.md');
 const rawContent = fs.readFileSync(filePath, 'utf-8');
-const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+const body = rawContent.replace(/^---[\s\S]*?---\r?\n/, '');
 const type = getPostType(post, body);
 const colors = postTypeColors[type];
 const typeLabel = postTypeLabels[type].zh;

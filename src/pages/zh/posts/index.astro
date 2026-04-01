@@ -16,10 +16,10 @@ const posts = (await getCollection('posts', ({ data }) => data.lang === lang && 
 const postsWithType = posts.map((post) => {
   const filePath = path.join('src/content/posts', post.id + '.md');
   const rawContent = fs.readFileSync(filePath, 'utf-8');
-  const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+  const body = rawContent.replace(/^---[\s\S]*?---\r?\n/, '');
   const type = getPostType(post, body);
   const threadCount = type === 'thread' ? getThreadCount(body) : undefined;
-  const firstLine = body.split(/\n---\n/)[0].trim();
+  const firstLine = body.split(/\r?\n---\r?\n/)[0].trim();
   return { post, type, threadCount, firstLine };
 });
 ---

@@ -14,7 +14,7 @@ interface Props {
 const { title, lang, description, image, narrow = false } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
-const maxWidth = narrow ? 'max-w-[680px]' : 'max-w-4xl';
+const maxWidth = narrow ? 'max-w-3xl' : 'max-w-4xl';
 ---
 
 <!doctype html>
@@ -22,6 +22,9 @@ const maxWidth = narrow ? 'max-w-[680px]' : 'max-w-4xl';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>{title}</title>
     <link rel="canonical" href={canonicalUrl} />
     {description && <meta name="description" content={description} />}

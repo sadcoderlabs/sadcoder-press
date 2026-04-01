@@ -11,7 +11,7 @@ export type PostType = 'reply' | 'thread' | 'post';
 export function getPostType(post: CollectionEntry<'posts'>, rawContent?: string): PostType {
   if (post.data.replyTo) return 'reply';
   if (rawContent) {
-    const segments = rawContent.split(/\n---\n/);
+    const segments = rawContent.split(/\r?\n---\r?\n/);
     if (segments.length > 1) return 'thread';
   }
   return 'post';
@@ -21,13 +21,13 @@ export function getPostType(post: CollectionEntry<'posts'>, rawContent?: string)
  * Count segments in a thread post.
  */
 export function getThreadCount(rawContent: string): number {
-  return rawContent.split(/\n---\n/).length;
+  return rawContent.split(/\r?\n---\r?\n/).length;
 }
 
 /** Top bar color for each post type */
 export const postTypeColors: Record<PostType, { bar: string; badgeBg: string; badgeText: string }> = {
   reply: { bar: '#A78BFA', badgeBg: '#7C3AED', badgeText: 'white' },
-  post: { bar: '#FBBF24', badgeBg: '#D97706', badgeText: 'white' },
+  post: { bar: '', badgeBg: '#D97706', badgeText: 'white' },
   thread: { bar: '#7C3AED', badgeBg: '#7C3AED', badgeText: 'white' },
 };
 

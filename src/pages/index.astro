@@ -24,19 +24,18 @@ const socialPosts = (await getCollection('posts', ({ data }) => data.lang === la
 const socialPostsWithType = socialPosts.map((post) => {
   const filePath = path.join('src/content/posts', post.id + '.md');
   const rawContent = fs.readFileSync(filePath, 'utf-8');
-  const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+  const body = rawContent.replace(/^---[\s\S]*?---\r?\n/, '');
   const type = getPostType(post, body);
   const threadCount = type === 'thread' ? getThreadCount(body) : undefined;
-  const firstLine = body.split(/\n---\n/)[0].trim();
+  const firstLine = body.split(/\r?\n---\r?\n/)[0].trim();
   return { post, type, threadCount, firstLine };
 });
 ---
 
 <Base title="sadcoder.press" lang={lang}>
   <Hero lang={lang} />
-  <LineDivider variant="primary" />
 
-  <section>
+  <section class="mt-12">
     <SectionLabel label="Latest Articles" color="primary" />
     {blogPosts.length === 0 && <p style="color: var(--text-muted);">No posts yet.</p>}
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -52,9 +51,7 @@ const socialPostsWithType = socialPosts.map((post) => {
     </div>
   </section>
 
-  <LineDivider variant="accent" />
-
-  <section>
+  <section class="mt-12">
     <SectionLabel label="Latest Posts" color="accent" />
     {socialPosts.length === 0 && <p style="color: var(--text-muted);">No posts yet.</p>}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

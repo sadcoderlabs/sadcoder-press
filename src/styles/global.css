@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @plugin "@tailwindcss/typography";
 
@@ -59,6 +58,7 @@
   padding: 1px 6px;
   border-radius: 4px;
   font-size: 0.875em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Microsoft JhengHei', 'PingFang TC', 'PingFang SC', sans-serif;
 }
 
 .prose :where(code):not(:where(pre code, [class~="not-prose"] *))::before,
