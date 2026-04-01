@@ -23,11 +23,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 .vercel/
-.agents/skills/article-preparation
-.agents/skills/article-translation
-.agents/skills/article-writing
-.agents/skills/writing-management
-.claude/skills/article-preparation
-.claude/skills/article-translation
-.claude/skills/article-writing
-.claude/skills/writing-management
+.agents/skills
+.claude/skills

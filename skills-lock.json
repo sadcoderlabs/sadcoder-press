@@ -4,22 +4,32 @@
     "article-preparation": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "83e395e6932c1a50b7dded3e1d0b0e80dd4530f5952f33f0b662f146eb0dc557"
+      "computedHash": "a9b127a29ac84133d19321dd3ca641ba379d9c695be479480d4095d96c9286a2"
     },
     "article-translation": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "1d4b83fda9febec83112bce2ad8c17b57043d7020d2967226db152bec6a4a994"
+      "computedHash": "e950381c1e85a26a58ebdb4344415382f6bf2c87bb5aedca7250eec32cbea1a2"
     },
     "article-writing": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "495d8f9fd5b051273951ede2879af8e29f111234d85006e6c1ec9952c21dc116"
+      "computedHash": "f1e0a65008e653638e4f3d56137e58c19286d96d427c7ffba9c350838f26817a"
+    },
+    "post-writing": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "f4561d87c67d882a02c466f3b66ef0ce9f9b95e13a20ea841a717438e53d30c2"
     },
     "writing-management": {
       "source": "sadcoderlabs/writer-skills",
       "sourceType": "github",
-      "computedHash": "03eea501bf5e95774f947e1f01704a14a7a8f16f76b179e019067568cc5edd20"
+      "computedHash": "e2c1ad961e1e53f0026dd40231a48d5e3c08a90287f76444e7169595d9461c88"
+    },
+    "x-engagement": {
+      "source": "sadcoderlabs/writer-skills",
+      "sourceType": "github",
+      "computedHash": "a5b2d699634f37b63e33ab06af1ddd85f7fc35f9f5ba31ab6e23b010de5c3822"
     }
   }
 }
