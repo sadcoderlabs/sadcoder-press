@@ -25,7 +25,7 @@ Claude Code 的記憶，從資訊量級來看，從概括到詳細分三層。
 
 但光是儲存記憶還不夠，記憶會腐爛。autoDream 就是來處理這件事的。
 
-Anthropic 把這個機制叫做「做夢」，靈感似乎來自人類 REM 睡眠期間的記憶整合。autoDream [以 forked subagent 的方式在背景執行](https://sathwick.xyz/blog/claude-code.html)，做四件事：先掃描現有記憶狀態，建立心智地圖；接著收集新訊號，特別留意「漂移記憶」(drifted memories)，就是跟目前程式碼已經對不上的舊事實；然後做整合，刪除被推翻的事實、合併來自多個 session 的重疊條目、把「昨天」轉成「2026-03-30」；最後修剪 MEMORY.md 索引，確保它維持在 200 行以內。
+Anthropic 把這個機制叫做「做夢」，靈感似乎來自人類 REM 睡眠期間的記憶整合。autoDream [以 forked subagent 的方式在背景執行](https://sathwick.xyz/blog/claude-code.html)，做四件事：先掃描現有記憶狀態，建立心智地圖；接著收集新訊號，特別留意「漂移記憶」(drifted memories)，就是跟目前程式碼已經對不上的舊事實；然後把整合結果寫入 topic files，刪除被推翻的事實、合併來自多個 session 的重疊條目、把「昨天」轉成「2026-03-30」，盡量併入既有檔案而非建立新的；最後修剪 MEMORY.md 索引，確保它維持在 200 行、約 25KB 以內。
 
 這整套機制裡有一個設計讓我特別在意：**記憶視為提示 (treat their own memory as a hint)**。Claude Code 的 agent 被要求在行動前，先對照實際程式碼驗證自己的記憶，不盲信上次記下的東西。這是一種內建的反思。
 
