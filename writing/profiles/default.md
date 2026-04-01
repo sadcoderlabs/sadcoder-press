@@ -18,9 +18,10 @@ created_by: Yuren Ju
 - 摘要式結尾：結尾不要重述文章講過的重點
 - 過度包裝：不隱藏實作中的問題、限制、或自己不懂的地方
 - 抽象對比：不要用「可以處理很多不同類型的事」這種模糊描述來區分兩個工具。要拉出精確的對比軸，例如「幫我寫程式 vs 幫我解決問題」
+- 「解同一道題」式的問題框架：不要把事情簡化成一個固定問題配固定答案。直接描述動機或做法的差異，不用「解題」隱喻
 
 ## Sentence-Level Preferences
-Not yet defined — will evolve through writing.
+- 避免急促的時間詞（如「立刻」「馬上」）。偏好更自然的時間流動感，例如「讓我也想瞭解」而非「立刻想深入研究」。
 
 ## Signature Moves
 Not yet defined — will evolve through writing.

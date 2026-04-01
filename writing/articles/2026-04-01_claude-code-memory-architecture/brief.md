@@ -4,7 +4,7 @@
 - Title: Claude Code 怎麼整理記憶——從原始碼外洩看 AI Agent 的記憶架構
 - Author: yurenju
 - Date: 2026-04-01
-- Status: writing  <!-- draft | ready | writing | review | published -->
+- Status: review  <!-- draft | ready | writing | review | published -->
 - Original language: zh
 - Translations: en
 
@@ -79,8 +79,8 @@
 - [x] Ready for writing
 
 ### Writing & Review (managed by later skills)
-- [ ] First draft completed
-- [ ] Fact-check completed
+- [x] First draft completed
+- [x] Fact-check completed
 - [ ] Review completed
 - [ ] Translations completed
 - [ ] Finalized
