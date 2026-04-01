@@ -1,56 +1,47 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection, render } from 'astro:content';
-import { getSlug } from '../../lib/utils';
+import SectionLabel from '../../components/SectionLabel.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+import { getSlug, formatDate } from '../../lib/utils';
+import { getPostType, getThreadCount } from '../../lib/posts';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const lang = 'en';
 
 const posts = (await getCollection('posts', ({ data }) => data.lang === lang && !data.draft))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const rendered = await Promise.all(posts.map(async (post) => {
-  const { Content } = await render(post);
-  return { post, Content };
-}));
+const postsWithType = posts.map((post) => {
+  const filePath = path.join('src/content/posts', post.id + '.md');
+  const rawContent = fs.readFileSync(filePath, 'utf-8');
+  const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+  const type = getPostType(post, body);
+  const threadCount = type === 'thread' ? getThreadCount(body) : undefined;
+  const firstLine = body.split(/\n---\n/)[0].trim();
+  return { post, type, threadCount, firstLine };
+});
 ---
 
 <Base title="Posts" lang={lang}>
-  <h1 class="text-3xl font-bold mt-8 mb-6">Posts</h1>
-  {posts.length === 0 && <p class="text-gray-500 dark:text-gray-400">No posts yet.</p>}
-  <div class="space-y-8">
-    {rendered.map(({ post, Content }) => (
-      <article class="border-b dark:border-gray-700 pb-8">
-        <div class="flex items-center gap-2 mb-3">
-          <a href={`/posts/${getSlug(post.id)}/`} class="text-sm text-gray-500 dark:text-gray-400 hover:underline">
-            {post.data.date.toLocaleDateString('en-US')}
-          </a>
-          {post.data.platform.map((p) => (
-            <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{p}</span>
-          ))}
-        </div>
-        {post.data.title && (
-          <h2 class="text-xl font-bold mb-2">
-            <a href={`/posts/${getSlug(post.id)}/`} class="text-blue-600 dark:text-blue-400 hover:underline">{post.data.title}</a>
-          </h2>
-        )}
-        <div class="prose dark:prose-invert max-w-none mb-3">
-          <Content />
-        </div>
-        <div class="flex gap-1">
-          {post.data.tags.map((tag) => (
-            <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{tag}</span>
-          ))}
-        </div>
-        {post.data.publishedUrl && (
-          <div class="flex gap-3 mt-2">
-            {Object.entries(post.data.publishedUrl).map(([platform, url]) => (
-              <a href={url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline text-xs capitalize">
-                {platform} ↗
-              </a>
-            ))}
-          </div>
-        )}
-      </article>
-    ))}
+  <div class="pt-10">
+    <SectionLabel label="All Posts" color="accent" />
+    {posts.length === 0 && <p style="color: var(--text-muted);">No posts yet.</p>}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {postsWithType.map(({ post, type, threadCount, firstLine }) => (
+        <PostCard
+          type={type}
+          platforms={post.data.platform}
+          content={firstLine}
+          date={formatDate(post.data.date, lang)}
+          href={`/posts/${getSlug(post.id)}/`}
+          replyAuthor={post.data.replyTo?.author}
+          threadTitle={post.data.title}
+          threadCount={threadCount}
+          lang={lang}
+        />
+      ))}
+    </div>
   </div>
 </Base>
