@@ -1,7 +1,7 @@
 # Writing Brief
 
 ## Article Info
-- Title: Claude Code 怎麼整理記憶——從原始碼外洩看 AI Agent 的記憶架構
+- Title: 從 Claude Code 外洩重新思考 AI Agent 的記憶整理
 - Author: yurenju
 - Date: 2026-04-01
 - Status: review  <!-- draft | ready | writing | review | published -->
