@@ -1,7 +1,10 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
-import { getSlug } from '../../../lib/utils';
+import { getSlug, formatDate } from '../../../lib/utils';
+import { getPostType, postTypeColors, postTypeLabels, platformColors } from '../../../lib/posts';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => data.lang === 'zh' && !data.draft);
@@ -13,33 +16,50 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const pageTitle = post.data.title || `動態 — ${post.data.date.toLocaleDateString('zh-TW')}`;
+const pageTitle = post.data.title || `動態 — ${formatDate(post.data.date, 'zh')}`;
+
+const filePath = path.join('src/content/posts', post.id + '.md');
+const rawContent = fs.readFileSync(filePath, 'utf-8');
+const body = rawContent.replace(/^---[\s\S]*?---\n/, '');
+const type = getPostType(post, body);
+const colors = postTypeColors[type];
+const typeLabel = postTypeLabels[type].zh;
 ---
 
-<Base title={pageTitle} lang="zh">
-  <article class="mt-8">
-    {post.data.title && <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>}
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{post.data.date.toLocaleDateString('zh-TW')}</p>
-    <div class="flex gap-1 mb-4">
-      {post.data.platform.map((p) => (
-        <span class="text-xs bg-blue-900 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded">{p}</span>
-      ))}
+<Base title={pageTitle} lang="zh" narrow>
+  <article class="pt-8">
+    {post.data.title && (
+      <h1 class="text-[32px] font-extrabold leading-tight tracking-tight mb-4" style="color: var(--text-primary);">{post.data.title}</h1>
+    )}
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-[10px] px-2 py-px rounded-full" style={`background: ${colors.badgeBg}; color: ${colors.badgeText};`}>{typeLabel}</span>
+      {post.data.platform.map((p) => {
+        const pc = platformColors[p] || platformColors.twitter;
+        const label = p === 'twitter' ? '𝕏' : p;
+        return (
+          <>
+            <span class="text-[10px] px-2 py-px rounded-full dark:hidden" style={`background: ${pc.bg}; color: ${pc.text};`}>{label}</span>
+            <span class="text-[10px] px-2 py-px rounded-full hidden dark:inline" style={`background: ${pc.darkBg}; color: ${pc.darkText};`}>{label}</span>
+          </>
+        );
+      })}
+      <span class="text-sm ml-auto" style="color: var(--text-muted);">{formatDate(post.data.date, 'zh')}</span>
     </div>
     {post.data.replyTo && (
-      <a href={post.data.replyTo.url} target="_blank" rel="noopener noreferrer" class="block mb-4 px-3 py-2 border-l-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 rounded-r text-sm no-underline hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-        <span class="text-gray-500 dark:text-gray-400 text-xs">↩ 回覆 <span class="font-medium text-gray-700 dark:text-gray-300">@{post.data.replyTo.author}</span></span>
-        <p class="text-gray-600 dark:text-gray-400 mt-1 mb-0 line-clamp-3 text-xs leading-relaxed">{post.data.replyTo.content}</p>
+      <a href={post.data.replyTo.url} target="_blank" rel="noopener noreferrer" class="block mb-4 px-3 py-2 border-l-2 rounded-r text-sm no-underline transition-colors" style={`border-color: var(--brand-primary); background: var(--bg-card-inner);`}>
+        <span class="text-xs" style="color: var(--text-muted);">↩ 回覆 <span class="font-medium" style="color: var(--brand-primary-text);">@{post.data.replyTo.author}</span></span>
+        <p class="mt-1 mb-0 line-clamp-3 text-xs leading-relaxed" style="color: var(--text-secondary);">{post.data.replyTo.content}</p>
       </a>
     )}
     <div class="prose dark:prose-invert max-w-none mb-6">
       <Content />
     </div>
     {post.data.publishedUrl && (
-      <div class="border-t dark:border-gray-700 pt-4 mt-6">
-        <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">發布於</h2>
+      <div class="pt-4 mt-6 border-t" style="border-color: var(--border-main);">
+        <h2 class="text-sm font-semibold mb-2" style="color: var(--text-muted);">發布於</h2>
         <div class="flex gap-3">
           {Object.entries(post.data.publishedUrl).map(([platform, url]) => (
-            <a href={url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline text-sm capitalize">
+            <a href={url} target="_blank" rel="noopener noreferrer" class="text-sm capitalize hover:underline" style="color: var(--brand-primary-text);">
               {platform}
             </a>
           ))}
