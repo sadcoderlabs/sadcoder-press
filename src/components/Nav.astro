@@ -9,23 +9,49 @@ interface Props {
 const { lang } = Astro.props;
 
 const prefix = lang === 'en' ? '' : '/zh';
+const currentPath = Astro.url.pathname;
 
 const labels = {
-  en: { home: 'Home', blog: 'Blog', posts: 'Posts' },
-  zh: { home: '首頁', blog: '部落格', posts: '動態' },
+  en: { blog: 'Blog', posts: 'Posts' },
+  zh: { blog: '部落格', posts: '動態' },
 };
 
 const t = labels[lang];
+
+function isActive(href: string): boolean {
+  return currentPath === href || currentPath.startsWith(href.replace(/\/$/, '') + '/');
+}
 ---
 
-<nav class="flex items-center justify-between max-w-3xl mx-auto px-4 py-6">
-  <div class="flex gap-6">
-    <a href={`${prefix}/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.home}</a>
-    <a href={`${prefix}/blog/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.blog}</a>
-    <a href={`${prefix}/posts/`} class="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">{t.posts}</a>
-  </div>
-  <div class="flex items-center gap-4">
-    <ThemeToggle />
-    <LanguageSwitcher lang={lang} />
+<nav class="max-w-4xl mx-auto px-6 py-5">
+  <div class="flex items-center justify-between">
+    <a href={`${prefix}/`} class="flex items-center gap-2 no-underline">
+      <div class="w-7 h-7 rounded-md flex items-center justify-center text-sm font-bold text-white" style="background: var(--brand-primary);">s</div>
+      <span class="font-semibold text-sm" style="color: var(--text-primary);">sadcoder.press</span>
+    </a>
+    <div class="flex items-center gap-5">
+      <a
+        href={`${prefix}/blog/`}
+        class:list={[
+          'text-sm transition-colors',
+          isActive(`${prefix}/blog/`) ? 'font-medium' : '',
+        ]}
+        style={isActive(`${prefix}/blog/`) ? 'color: var(--text-primary);' : 'color: var(--text-secondary);'}
+      >
+        {t.blog}
+      </a>
+      <a
+        href={`${prefix}/posts/`}
+        class:list={[
+          'text-sm transition-colors',
+          isActive(`${prefix}/posts/`) ? 'font-medium' : '',
+        ]}
+        style={isActive(`${prefix}/posts/`) ? 'color: var(--text-primary);' : 'color: var(--text-secondary);'}
+      >
+        {t.posts}
+      </a>
+      <LanguageSwitcher lang={lang} />
+      <ThemeToggle />
+    </div>
   </div>
 </nav>
