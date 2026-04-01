@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { getImage } from 'astro:assets';
-import { getSlug } from '../../../lib/utils';
+import { getSlug, formatDate } from '../../../lib/utils';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => data.lang === 'zh' && !data.draft);
@@ -22,15 +22,16 @@ if (post.data.image) {
 }
 ---
 
-<Base title={post.data.title} lang="zh" description={post.data.description} image={ogImage}>
-  <article class="mt-8">
-    <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">{post.data.date.toLocaleDateString('zh-TW')}</p>
-    <div class="flex gap-1 mb-6">
+<Base title={post.data.title} lang="zh" description={post.data.description} image={ogImage} narrow>
+  <article class="pt-8">
+    <div class="flex flex-wrap gap-1.5 mb-4">
       {post.data.tags.map((tag) => (
-        <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">{tag}</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full" style="background: var(--tag-bg); color: var(--tag-text);">{tag}</span>
       ))}
     </div>
+    <h1 class="text-[32px] font-extrabold leading-tight tracking-tight" style="color: var(--text-primary);">{post.data.title}</h1>
+    <p class="mt-3 text-sm" style="color: var(--text-muted);">{formatDate(post.data.date, 'zh')}</p>
+    <div class="my-6 h-px" style="background: var(--border-main);"></div>
     <div class="prose dark:prose-invert max-w-none">
       <Content />
     </div>
