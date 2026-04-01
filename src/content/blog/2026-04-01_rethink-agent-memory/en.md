@@ -6,6 +6,8 @@ tags: [ai, agent, memory, claude-code, openclaw]
 lang: en
 ---
 
+![Rethinking AI Agent Memory After the Claude Code Leak](./assets/cover.jpg)
+
 On March 31, Claude Code's source code was accidentally leaked due to an npm packaging error. [512,000 lines of TypeScript across 1,906 files](https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know), and the community had the entire architecture picked apart within hours. Most people were talking about undercover mode and frustration regex, but one word caught my attention: **autoDream**.
 
 We've been exploring memory consolidation for AI agents on OpenClaw. Seeing how a company like Anthropic implements "dreaming" made me want to understand their approach.

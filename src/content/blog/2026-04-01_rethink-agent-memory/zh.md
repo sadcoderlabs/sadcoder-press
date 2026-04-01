@@ -6,6 +6,8 @@ tags: [ai, agent, memory, claude-code, openclaw]
 lang: zh
 ---
 
+![從 Claude Code 外洩重新思考 AI Agent 的記憶整理](./assets/cover.jpg)
+
 3 月 31 日，Claude Code 的原始碼因為 npm 打包錯誤意外外洩。[512,000 行 TypeScript，1,906 個檔案](https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know)，社群幾個小時內就把整個架構翻了一遍。多數人在討論 undercover mode 和 frustration regex，但有一個詞抓住了我的注意力：**autoDream**。
 
 我們在 OpenClaw 上探索 AI agent 記憶整合的方式。有機會看到如 Anthropic 這樣的企業是怎麼實做「作夢」的，讓我也想瞭解他們的作法。
