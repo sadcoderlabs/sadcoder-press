@@ -6,6 +6,7 @@ source_article: articles/2026-04-01_rethink-agent-memory/
 original_language: zh
 translations: [en]
 platforms: [twitter]
+published_to_press: true
 ---
 
 Claude Code 原始碼因 npm 打包錯誤外洩，512K 行 TypeScript。多數人在看 undercover mode，但 autoDream 抓住了我的注意力。它是目前唯一內建記憶整理的主流 AI coding tool。🧵
