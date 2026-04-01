@@ -69,6 +69,7 @@
 .prose :where(pre):not(:where([class~="not-prose"] *)) {
   background: #1C1529;
   border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Microsoft JhengHei', 'PingFang TC', 'PingFang SC', sans-serif;
 }
 
 /* Card hover */
