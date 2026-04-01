@@ -3,6 +3,7 @@ title: "Rethinking AI Agent Memory After the Claude Code Leak"
 date: 2026-04-01
 description: "How Claude Code and OpenClaw each organize AI agent memory — from cutting-edge design to hands-on practice, with applicable memory management patterns you can take away"
 tags: [ai, agent, memory, claude-code, openclaw]
+image: ./assets/cover.jpg
 lang: en
 ---
 

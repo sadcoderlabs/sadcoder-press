@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { getImage } from 'astro:assets';
 import { getSlug } from '../../../lib/utils';
 
 export async function getStaticPaths() {
@@ -13,9 +14,15 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+let ogImage: string | undefined;
+if (post.data.image) {
+  const optimized = await getImage({ src: post.data.image, format: 'jpg', width: 1200 });
+  ogImage = optimized.src;
+}
 ---
 
-<Base title={post.data.title} lang="zh">
+<Base title={post.data.title} lang="zh" description={post.data.description} image={ogImage}>
   <article class="mt-8">
     <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">{post.data.date.toLocaleDateString('zh-TW')}</p>

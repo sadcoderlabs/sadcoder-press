@@ -3,6 +3,7 @@ title: "從 Claude Code 外洩重新思考 AI Agent 的記憶整理"
 date: 2026-04-01
 description: "理解 Claude Code 和 sadcoder（OpenClaw）各自怎麼整理 AI agent 的記憶——從業界最前沿的設計到實戰中的做法，讀者會帶走可應用的記憶管理模式"
 tags: [ai, agent, memory, claude-code, openclaw]
+image: ./assets/cover.jpg
 lang: zh
 ---
 
